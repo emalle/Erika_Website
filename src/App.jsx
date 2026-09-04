@@ -29,7 +29,7 @@ function App() {
                             />
                         </div>
 
-                        <div className="biography">
+                        <div className="card-text">
                             <p className="section-label">Chi sono</p>
 
                             <p>
@@ -73,60 +73,57 @@ function App() {
                         </div>
                     </div>
                 </section>
-                <section id="libri" className="feature-card">
-                    <div className="card-inner">
-                        <div className="book-list">
-                            <p className="section-label">I miei libri</p>
-                            <div className="book-item">
-                                <div className="book-flip">
-                                    <div className="book-inner">
+                <section id="libri" className="books-section">
+                    <p className="section-label">I miei libri</p>
+                    <div className="books-grid">
+                        <div className="book-card">
+                            <div className="book-cover">
+                                <div className="book-inner">
 
-                                        <div className="book-front">
-                                            <img
-                                                src="/images/book-1.jpg"
-                                                alt="Titolo del libro"
-                                            />
-                                        </div>
-
-                                        <div className="book-back">
-                                            <h3>Lanterne Verdi</h3>
-                                            <p>
-                                                TARGET: 12+
-                                            </p>
-                                            <p>
-                                                PAGINE: 228
-                                            </p>
-                                            <p>
-                                                PREZZO: 12 euro
-                                            </p>
-                                            <p>
-                                                EDITORE: Einaudi Ragazzi
-                                            </p>
-                                        </div>
-
+                                    <div className="book-front">
+                                        <img
+                                            src="/images/Lanterne.jpeg"
+                                        />
                                     </div>
-                                </div>
 
-                                <div className="book-info">
-                                    <h2>Lanterne Verdi</h2>
-                                    <p>
-                                        TRAMA: Nur e la sua famiglia hanno lasciato il loro Paese in guerra seguendo una promessa di pace.
-                                        Si ritrovano in un Paese freddo del Nord, tra loro e l’Europa ci sono solo un confine invalicabile e una foresta antica.
-                                        Il desiderio di Nur di essere solo una tredicenne e di vivere senza prendersi cura del fratello neonato la porta ad abbandonare il piccolo Kam nella foresta.
-                                        La ricerca del fratello e del suo riscatto saranno la sua salvezza.
-                                    </p>
-                                    <p>
-                                        TEMI: avventura, famiglia, coraggio, natura, crescita, guerra
-                                    </p>
-                                    <p>
-                                        PERCHÉ LEGGERLO: Un romanzo di formazione tra la vita e la morte. Una corsa a perdifiato attraverso una foresta ghiacciata per amore del proprio fratello.
-                                        Una storia per chi ama attraversare i confini del mondo che conosce. Un libro che parla di coraggio e crescita, di confini da superare e di barriere da abbattere.
-                                    </p>
+                                    <div className="book-back">
+                                        <h3>Lanterne Verdi</h3>
+                                        <p>
+                                            TARGET: 12+
+                                        </p>
+                                        <p>
+                                            PAGINE: 228
+                                        </p>
+                                        <p>
+                                            PREZZO: 12 euro
+                                        </p>
+                                        <p>
+                                            EDITORE: Einaudi Ragazzi
+                                        </p>
+                                    </div>
+
                                 </div>
                             </div>
-                        </div >
-                    </div >
-                </section >
+
+                            <div className="book-content">
+                                <h2>Lanterne Verdi</h2>
+                                <p className="clamp">
+                                    TRAMA: Nur e la sua famiglia hanno lasciato il loro Paese in guerra seguendo una promessa di pace.
+                                    Si ritrovano in un Paese freddo del Nord, tra loro e l'Europa ci sono solo un confine invalicabile e una foresta antica.
+                                    Il desiderio di Nur di essere solo una tredicenne e di vivere senza prendersi cura del fratello neonato la porta ad abbandonare il piccolo Kam nella foresta.
+                                    La ricerca del fratello e del suo riscatto saranno la sua salvezza.
+                                </p>
+                                <p className="clamp">
+                                    TEMI: avventura, famiglia, coraggio, natura, crescita, guerra
+                                </p>
+                                <p className="clamp">
+                                    PERCHÉ LEGGERLO: Un romanzo di formazione tra la vita e la morte. Una corsa a perdifiato attraverso una foresta ghiacciata per amore del proprio fratello.
+                                    Una storia per chi ama attraversare i confini del mondo che conosce. Un libro che parla di coraggio e crescita, di confini da superare e di barriere da abbattere.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main >
 
             <footer className="site-footer">

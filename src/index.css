@@ -148,9 +148,9 @@ body {
   box-shadow: 0 8px 20px rgba(25, 61, 59, 0.25);
 }
 
-/* Biography */
+/* card-text */
 
-.biography {
+.card-text {
   padding: 10px 15px;
 }
 
@@ -167,34 +167,137 @@ body {
   border-bottom: 1px solid black;
 }
 
-.biography p:not(.section-label) {
+.card-text p:not(.section-label) {
   margin: 0 0 18px;
 
   font-size: clamp(1rem, 1vw, 0.6rem);
   line-height: 1;
 }
 
-/*book section*/
-.book-item {
-  display: flex;
-  align-items: center;
-  gap: 35px;
-
-  min-height: 280px;
-  margin-bottom: 35px;
-  padding: 25px;
-
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 14px;
+/* Books section */
+.books-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 30px;
 }
 
-/* footer*/
-
-.site-footer {
-  padding: 35px 20px;
+.books-section>.section-label {
+  margin-bottom: 25px;
   text-align: center;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(25, 61, 59, 0.25);
+}
+
+/* Grid of book cards, 2 per row, all rows/cards stretched to equal height */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 50px;
+  align-items: stretch;
+}
+
+/* Individual book — fixed height so every card matches */
+.book-card {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 20px;
+  align-items: start;
+
+  height: 260px;
+  padding: 25px;
+  overflow: hidden;
+
+  background: rgb(194, 109, 13);
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(25, 61, 59, 0.2);
+}
+
+/* Small flip cover */
+.book-cover {
+  width: 110px;
+  aspect-ratio: 3 / 4;
+  perspective: 1000px;
+}
+
+.book-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.book-cover:hover .book-inner {
+  transform: rotateY(180deg);
+}
+
+.book-front,
+.book-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(25, 61, 59, 0.25);
+}
+
+.book-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.book-back {
+  transform: rotateY(180deg);
+  background: #193d3b;
+  color: beige;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.book-back h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.book-back p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+/* Book text content — fills the fixed card height, scrolls internally if content is too long */
+.book-content {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.book-content h2 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.book-content p {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.book-content p:last-child {
+  margin-bottom: 0;
+}
+
+.book-content p.clamp {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Mobile*/
@@ -231,7 +334,7 @@ body {
     max-height: 320px;
   }
 
-  .biography {
+  .card-text {
     padding: 0;
   }
 }
