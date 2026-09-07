@@ -12,11 +12,14 @@ export default function Header() {
                 </p>
 
                 <nav className="navigation">
-                    <Link to="/#libri">I miei libri</Link>
 
-                    <Link to="/#workshops">Workshops</Link>
+                    <a href="/#chi-sono">Chi sono</a>
 
-                    <Link to="/#foto">Foto</Link>
+                    <a href="/#libri">I miei libri</a>
+
+                    <Link to="/workshops">Workshops</Link>
+
+                    <Link to="/foto">Foto</Link>
 
                     <Link to="/contatti">Contatti</Link>
 
