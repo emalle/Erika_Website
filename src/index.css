@@ -187,7 +187,7 @@ body {
   text-align: center;
 }
 
-/* Grid of book cards, 2 per row, all rows/cards stretched to equal height */
+/* Grid of book cards */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -195,146 +195,52 @@ body {
   align-items: stretch;
 }
 
-/* Individual book — fixed height so every card matches */
+/* Individual book  */
 .book-card {
   display: grid;
   grid-template-columns: 110px 1fr;
-  gap: 20px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "cover   content"
+    "summary summary";
+  gap: 10px 20px;
   align-items: start;
 
   height: 260px;
   padding: 25px;
   overflow: hidden;
 
-  background: rgb(194, 109, 13);
+  background: rgb(236, 170, 95);
   border-radius: 18px;
   box-shadow: 0 14px 35px rgba(25, 61, 59, 0.2);
 }
 
-/* Small flip cover */
 .book-cover {
-  width: 110px;
-  aspect-ratio: 3 / 4;
-  perspective: 1000px;
+  grid-area: cover;
 }
 
-.book-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.book-cover:hover .book-inner {
-  transform: rotateY(180deg);
-}
-
-.book-front,
-.book-back {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(25, 61, 59, 0.25);
-}
-
-.book-front img {
+.book-cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.book-back {
-  transform: rotateY(180deg);
-  background: #193d3b;
-  color: beige;
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  text-align: center;
-}
-
-.book-back h3 {
-  margin: 0 0 8px;
-  font-size: 0.95rem;
-}
-
-.book-back p {
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.3;
-}
-
-/* Book text content — fills the fixed card height, scrolls internally if content is too long */
 .book-content {
-  height: 100%;
-  overflow-y: auto;
-  padding-right: 4px;
+  grid-area: content;
 }
 
-.book-content h2 {
+.book-summary-block {
+  grid-area: summary;
+}
+
+.book-summary {
   margin: 0 0 8px;
-  font-size: 1.05rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #193d3b;
 }
 
-.book-content p {
-  margin: 0 0 8px;
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-
-.book-content p:last-child {
-  margin-bottom: 0;
-}
-
-.book-content p.clamp {
-  display: -webkit-box;
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Mobile*/
-
-@media (max-width: 820px) {
-  .site-header {
-    padding: 45px 20px 30px;
-  }
-
-  .site-header h1 {
-    font-size: clamp(2.8rem, 14vw, 5rem);
-  }
-
-  .tagline {
-    margin-bottom: 30px;
-  }
-
-  .navigation {
-    gap: 15px 20px;
-  }
-
-  .main-content {
-    padding: 35px 18px;
-  }
-
-  .card-inner {
-    grid-template-columns: 1fr;
-    padding: 35px 25px;
-    gap: 35px;
-  }
-
-  .portrait {
-    width: 65%;
-    max-height: 320px;
-  }
-
-  .card-text {
-    padding: 0;
-  }
+.read-more-btn {
+  font-size: 0.72rem;
 }
