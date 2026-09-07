@@ -7,7 +7,6 @@ import Home from './pages/Home.jsx'
 import Contatti from './pages/Contatti.jsx'
 import DomandeFrequenti from './pages/DomandeFrequenti.jsx'
 import Workshops from './pages/Workshops.jsx'
-import Foto from './pages/Foto.jsx'
 function App() {
     return (
         <div className="page">
@@ -18,7 +17,6 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/contatti" element={<Contatti />} />
                     <Route path="/workshops" element={<Workshops />} />
-                    <Route path="/foto" element={<Foto />} />
                     <Route path="/domande-frequenti" element={<DomandeFrequenti />} />
                 </Routes>
             </main>

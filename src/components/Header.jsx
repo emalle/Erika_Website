@@ -19,8 +19,6 @@ export default function Header() {
 
                     <Link to="/workshops">Workshops</Link>
 
-                    <Link to="/foto">Foto</Link>
-
                     <Link to="/contatti">Contatti</Link>
 
                     <Link to="/domande-frequenti">Domande Frequenti</Link>

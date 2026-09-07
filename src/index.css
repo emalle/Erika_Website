@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  background: beige;
+  background: rgb(255, 253, 208);
   color: #193d3b;
   font-family: "Ubuntu", sans-serif;
 
@@ -114,7 +114,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  background: rgb(152, 219, 152);
+  background: #4CAF50;
   border-radius: 18px;
 
   box-shadow: 0 14px 35px rgba(25, 61, 59, 0.2);
@@ -210,7 +210,7 @@ body {
   padding: 25px;
   overflow: hidden;
 
-  background: rgb(236, 170, 95);
+  background: #ECAA5F;
   border-radius: 18px;
   box-shadow: 0 14px 35px rgba(25, 61, 59, 0.2);
 }
@@ -349,8 +349,9 @@ body {
 /* Domande Frequenti */
 
 .domande-frequenti {
-  max-width: 1300px;
+  max-width: 1000px;
   margin: 0 auto;
+  background: transparent;
   color: #193d3b;
 }
 
@@ -392,7 +393,7 @@ body {
 
 /* Footer */
 .site-footer {
-  background: white;
+  background: rgb (255, 253, 208);
   color: black;
   padding: 10px;
   text-align: center;
