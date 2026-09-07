@@ -28,7 +28,7 @@ body {
 .site-header {
   position: relative;
   overflow: hidden;
-  padding: 70px 30px 45px;
+  padding: 20px 18px 10px;
   text-align: center;
   border-bottom: 1px solid rgba(25, 61, 59, 0.35);
   background: #f7f0df;
@@ -240,7 +240,7 @@ body {
   font-weight: 700;
 }
 
-.read-more-btn {
+.trama-btn {
   font-size: 0.88rem;
 }
 

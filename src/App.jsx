@@ -1,23 +1,11 @@
 import "./index.css";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
 import { FaInstagram, FaFacebook, FaTelegram } from "react-icons/fa";
 function App() {
     return (
         <div className="page">
-            <header className="site-header">
-                <div className="header-content">
-                    <h1>Erika Casali</h1>
-                    <p className="tagline">Scrittrice di storie per ragazzi</p>
-
-                    <nav className="navigation">
-                        <a href="#libri">I miei libri</a>
-                        <a href="#workshops">Workshops</a>
-                        <a href="#foto">Foto</a>
-                        <a href="#contatti">Contatti</a>
-                        <a href="#faq">Domande Frequenti</a>
-                    </nav>
-                </div>
-            </header>
-
+            <Header />
             <main className="main-content">
                 <section className="feature-card">
                     <div className="card-inner">
@@ -91,7 +79,7 @@ function App() {
                                     Un libro che parla di coraggio e crescita, di confini da superare e di barriere da abbattere.
 
                                 </p>
-                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                                <a href="#libri" className="trama-btn">Leggi la trama</a>
                             </div>
                         </div>
                         <div className="book-card">
@@ -108,7 +96,7 @@ function App() {
                                     Si narra la Grecia al di fuori delle solite narrazioni che riguardano gli dei dell’Olimpo o l’estate vacanziera.
                                     È un viaggio sia geografico che personale per affrontare le proprie paure e quelle che gli adulti proiettano sui bambini.
                                 </p>
-                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                                <a href="#libri" className="trama-btn">Leggi la trama</a>
                             </div>
                         </div>
                         <div className="book-card">
@@ -125,7 +113,7 @@ function App() {
                                     Perché la narrativa è lo strumento migliore per immaginare come mettere in pratica le idee che
                                     riguardano il nostro futuro.
                                 </p>
-                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                                <a href="#libri" className="trama-btn">Leggi la trama</a>
                             </div>
                         </div>
                         <div className="book-card">
@@ -142,7 +130,7 @@ function App() {
                                     in classe affrontando l’argomento dal punto di vista della narrativa.
 
                                 </p>
-                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                                <a href="#libri" className="trama-btn">Leggi la trama</a>
                             </div>
                         </div>
                         <div className="book-card">
@@ -159,27 +147,14 @@ function App() {
                                     ma ancora non siamo riusciti a stabilire un limite e questo ci porta a
                                     domandarci che cosa ci renda esseri umani.
                                 </p>
-                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                                <a href="#libri" className="trama-btn">Leggi la trama</a>
                             </div>
                         </div>
                     </div>
                 </section>
             </main >
 
-            <footer className="site-footer">
-                <div className="footer-socials">
-                    <a href="https://www.instagram.com/erikacasali_/" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram />
-                    </a>
-                    <a href="https://www.facebook.com/erika.casali.9" target="_blank" rel="noopener noreferrer">
-                        <FaFacebook />
-                    </a>
-                    <a href="https://t.me/erikacasali" target="_blank" rel="noopener noreferrer">
-                        <FaTelegram />
-                    </a>
-                </div>
-                © Erika Casali
-            </footer>
+            <Footer />
         </div>
     );
 }
