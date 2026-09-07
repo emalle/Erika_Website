@@ -89,6 +89,7 @@ body {
   color: #193d3b;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 700;
   letter-spacing: 0.06em;
   transition: color 0.2s ease;
 }
@@ -161,7 +162,7 @@ body {
 
   color: black;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   border-bottom: 1px solid black;
@@ -201,12 +202,11 @@ body {
   grid-template-columns: 110px 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "cover   content"
-    "summary summary";
+    "cover   content";
   gap: 10px 20px;
   align-items: start;
 
-  height: 260px;
+  height: 240px;
   padding: 25px;
   overflow: hidden;
 
@@ -228,19 +228,40 @@ body {
 
 .book-content {
   grid-area: content;
+  font-size: 0.88rem;
 }
 
-.book-summary-block {
-  grid-area: summary;
-}
-
-.book-summary {
+.book-content h2 {
   margin: 0 0 8px;
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: #193d3b;
+}
+
+.book-content h3 {
+  font-size: 0.77rem;
+  font-weight: 700;
 }
 
 .read-more-btn {
-  font-size: 0.72rem;
+  font-size: 0.88rem;
+}
+
+/* Footer */
+.site-footer {
+  background: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  border-top: 3px solid green;
+}
+
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-socials svg {
+  width: 35px;
+  height: 35px;
 }

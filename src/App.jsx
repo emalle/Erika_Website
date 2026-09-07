@@ -1,5 +1,5 @@
 import "./index.css";
-
+import { FaInstagram, FaFacebook, FaTelegram } from "react-icons/fa";
 function App() {
     return (
         <div className="page">
@@ -84,20 +84,7 @@ function App() {
                             </div>
                             <div className="book-content">
                                 <h2>Lanterne Verdi</h2>
-                                <p className="clamp">
-                                    TARGET: 12+
-                                </p>
-                                <p className="clamp">
-                                    PAGINE: 228
-                                </p>
-                                <p className="clamp">
-                                    PREZZO: 12 euro
-                                </p>
-                                <p className="clamp">
-                                    EDITORE: Einaudi Ragazzi
-                                </p>
-                            </div>
-                            <div className="book-summary-block">
+                                <h3>Perché leggerlo</h3>
                                 <p className="book-summary">
                                     Un romanzo di formazione tra la vita e la morte. Una corsa a perdifiato attraverso una foresta ghiacciata
                                     per amore del proprio fratello. Una storia per chi ama attraversare i confini del mondo che conosce.
@@ -105,7 +92,74 @@ function App() {
 
                                 </p>
                                 <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                            </div>
+                        </div>
+                        <div className="book-card">
+                            <div className="book-cover">
+                                <img
+                                    src="/images/Linda.png"
+                                />
+                            </div>
+                            <div className="book-content">
+                                <h2>Linda e la Montagna di Fuoco</h2>
+                                <h3>Perché leggerlo</h3>
+                                <p className="book-summary">
+                                    La disubbidienza come distacco e come definizione di sé. La conoscenza di altri Paesi e culture attraverso il folklore.
+                                    Si narra la Grecia al di fuori delle solite narrazioni che riguardano gli dei dell’Olimpo o l’estate vacanziera.
+                                    È un viaggio sia geografico che personale per affrontare le proprie paure e quelle che gli adulti proiettano sui bambini.
+                                </p>
+                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                            </div>
+                        </div>
+                        <div className="book-card">
+                            <div className="book-cover">
+                                <img
+                                    src="/images/Disobbedienti.jpg"
+                                />
+                            </div>
+                            <div className="book-content">
+                                <h2>I Disobbedienti</h2>
+                                <h3>Perché leggerlo</h3>
+                                <p className="book-summary">
+                                    Perché ci piace avere gli occhi aperti sulla realtà e cercare alternative a quelle che ci vengono offerte.
+                                    Perché la narrativa è lo strumento migliore per immaginare come mettere in pratica le idee che
+                                    riguardano il nostro futuro.
+                                </p>
+                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                            </div>
+                        </div>
+                        <div className="book-card">
+                            <div className="book-cover">
+                                <img
+                                    src="/images/cuoriforti.jpg"
+                                />
+                            </div>
+                            <div className="book-content">
+                                <h2>Cuori Forti</h2>
+                                <h3>Perché leggerlo</h3>
+                                <p className="book-summary">
+                                    Una collezione di storie, fra cui anche la mia, scritte per parlare e fare educazione affettiva
+                                    in classe affrontando l’argomento dal punto di vista della narrativa.
 
+                                </p>
+                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
+                            </div>
+                        </div>
+                        <div className="book-card">
+                            <div className="book-cover">
+                                <img
+                                    src="/images/deeplearning.jpg"
+                                />
+                            </div>
+                            <div className="book-content">
+                                <h2>Deep Learning</h2>
+                                <h3>Perché leggerlo</h3>
+                                <p className="book-summary">
+                                    Perché l’Intelligenza artificiale fa parte della nostra quotidianità,
+                                    ma ancora non siamo riusciti a stabilire un limite e questo ci porta a
+                                    domandarci che cosa ci renda esseri umani.
+                                </p>
+                                <a href="#libri" className="read-more-btn">Leggi la trama</a>
                             </div>
                         </div>
                     </div>
@@ -113,9 +167,20 @@ function App() {
             </main >
 
             <footer className="site-footer">
+                <div className="footer-socials">
+                    <a href="https://www.instagram.com/erikacasali_/" target="_blank" rel="noopener noreferrer">
+                        <FaInstagram />
+                    </a>
+                    <a href="https://www.facebook.com/erika.casali.9" target="_blank" rel="noopener noreferrer">
+                        <FaFacebook />
+                    </a>
+                    <a href="https://t.me/erikacasali" target="_blank" rel="noopener noreferrer">
+                        <FaTelegram />
+                    </a>
+                </div>
                 © Erika Casali
             </footer>
-        </div >
+        </div>
     );
 }
 
