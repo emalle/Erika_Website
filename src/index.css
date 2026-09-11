@@ -509,10 +509,26 @@ body {
 
 /*Contattami Page*/
 
-.contact-page p {
+.contact-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 30px 100px;
+  color: #193d3b;
+}
 
-  font-size: 1.3rem;
-  line-height: 1.7;
+.contact-page p:not(.contact-intro) {
+
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.contact-intro {
+  font-family: "Script", cursive;
+  text-align: left;
+  font-size: 2rem;
+  color: #237c11;
+  font-weight: 500;
+  margin: 30px auto 20px;
 }
 
 .contatti-image {
@@ -520,7 +536,7 @@ body {
   height: 500px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(25, 61, 59, 0.18);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Footer */
