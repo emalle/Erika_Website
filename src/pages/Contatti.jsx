@@ -1,9 +1,12 @@
 function Contatti() {
     return (
         <section className="contact-page">
-            <p className="section-label">Contatti</p>
-
-            <h1>Contattami</h1>
+            <h1>Contattami!</h1>
+            <img
+                className="contatti-image image-left"
+                src="/images/Contattami.jpeg"
+                alt="Erika sotto la pioggia"
+            />
 
             <p>
                 Se vuoi contattarmi per informazioni sui miei libri,
@@ -11,7 +14,7 @@ function Contatti() {
             </p>
 
             <p>
-                Email: <a href="mailto:">inserisci qui la tua email</a>
+                Email: <a href="mailto:erikacasali@gmail.com">erikacasali@gmail.com</a>
             </p>
         </section>
     )

@@ -144,9 +144,9 @@ function Home() {
                                     setSelectedBook({
                                         title: 'Linda e la Montagna di Fuoco - Risma Libri',
                                         image: '/images/Linda.png',
-                                        description: `È estate e Linda sta per arrivare in Grecia, dove ogni anno trascorre le vacanze. Il suo papà è greco, e lì ci sono i nonni che ogni estate la coccolano e le raccontano storie e leggende. Una di queste riguarda
-                                            dei pericolosi esseri che nottetempo escono per rapire i bambini e trascinarli sottoterra. Questa, nelle intenzioni di Linda, sarà l’avventura dell’estate: infatti, di nascosto da genitori e sorellina, vuole avventurarsi in una grotta, 
-                                            perché lì è convinta di poter vedere i Kalikatzari (così si chiamano quei mostriciattoli) e avere finalmente qualcosa da raccontare ai suoi compagni di classe in Italia. Naturalmente nulla va come previsto, perché Linda è costretta a portare con sé la sua sorellina e questa viene rapita proprio dai Kalikatzari. Per Linda inizia un viaggio nell’oscurità, affrontando 
+                                        description: `È estate e Linda sta per arrivare in Grecia, dove ogni anno trascorre le vacanze. Il suo papà è greco, e lì ci sono i nonni che ogni estate la coccolano e le raccontano storie e leggende. 
+                                            Una di queste riguarda dei pericolosi esseri che nottetempo escono per rapire i bambini e trascinarli sottoterra. Questa, nelle intenzioni di Linda, sarà l’avventura dell’estate: infatti, di nascosto da genitori e sorellina, vuole avventurarsi in una grotta, 
+                                            perché lì è convinta di poter vedere i Kalikatzari (così si chiamano quei mostriciattoli). Naturalmente nulla va come previsto e per Linda inizia un viaggio nell’oscurità, affrontando 
                                             paure primordiali e trovando il coraggio per tentare l’impresa più importante della sua vita.`,
                                         themes: 'La disubbidienza come distacco e come definizione di sé. La conoscenza di altri Paesi e culture attraverso il folklore.',
                                         target: '9+',
