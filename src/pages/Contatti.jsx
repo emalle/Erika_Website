@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaTelegram, FaWhatsapp } from "react-icons/fa";
+
 function Contatti() {
     return (
         <section className="contact-page">
@@ -14,7 +16,7 @@ function Contatti() {
             </p>
 
             <p>
-                Email: <a href="mailto:erikacasali@gmail.com">erikacasali@gmail.com</a>
+                Email: erikacasali@gmail.com
             </p>
             <p>
                 Puoi anche trovarmi su{" "}
@@ -23,18 +25,18 @@ function Contatti() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Facebook
+                    <FaFacebook /> Facebook
                 </a>
             </p>
 
             <p>
-                Oppure su{" "}
+                oppure su{" "}
                 <a
                     href="https://www.instagram.com/erikacasali_/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Instagram
+                    <FaInstagram /> Instagram
                 </a>
             </p>
 
@@ -45,12 +47,11 @@ function Contatti() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Telegram
+                    <FaTelegram /> Telegram
                 </a>
+                <p>oppure su <FaWhatsapp /> WhatsApp +39 3395610523</p>
             </p>
-            <p>
-                Oppure su WhatsApp +39 3395610523
-            </p>
+
         </section>
     );
 }

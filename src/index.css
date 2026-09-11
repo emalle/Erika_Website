@@ -539,6 +539,12 @@ body {
   margin-bottom: 10px;
 }
 
+.contact-page a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 /* Footer */
 .site-footer {
   background: rgb (255, 253, 208);
