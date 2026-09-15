@@ -8,9 +8,9 @@ html {
 
 body {
   margin: 0;
-  background: rgb(255, 253, 208);
+  background: white;
   color: #193d3b;
-  font-family: "Kepler", sans-serif;
+  font-family: "Script", sans-serif;
 
   /* For the page to scroll */
   min-height: 100vh;
@@ -112,12 +112,25 @@ body {
   width: 100%;
   max-width: 1200px;
   margin-bottom: 50px;
-  margin: 80px auto 80px;
+  margin: 0 auto 70px;
+  padding: 45px 50 px;
 
-  background: #4fe4a8;
-  border-radius: 18px;
+  background: white;
+  border-radius: 24px;
 
   box-shadow: 0 14px 35px rgba(25, 61, 59, 0.2);
+}
+
+.workshops-card {
+  padding: 45px 55px;
+}
+
+.faq-card {
+  padding: 45px 55px;
+}
+
+.contact-card {
+  padding: 45px 55px;
 }
 
 .card-inner {
@@ -385,111 +398,68 @@ body {
 .faq-question+p {
   margin: 0;
   padding: 0 0 25px 20px;
-  border-bottom: 1px solid rgba(25, 61, 59, 0.2);
   font-size: 1rem;
   line-height: 1.7;
 }
 
-/* Workshops Page */
+/* Workshops */
 
-.workshops-page {
-  max-width: 1000px;
+.workshop-card {
+  padding: 50px;
+}
+
+.workshops-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.workshop-list {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 10px 30px 100px;
-  color: #193d3b;
+}
+
+.workshop-entry {
+  padding: 40px 10px;
+}
+
+.workshop-entry-inner {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.workshop-entry:nth-of-type(2) .workshop-entry-inner {
+  grid-template-columns: 1fr 220px;
+}
+
+.workshop-entry:nth-of-type(2) .workshop-entry-image {
+  order: 2;
+}
+
+.workshop-entry-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: zoom-in;
+  box-shadow: 0 8px 20px rgba(25, 61, 59, 0.15);
+}
+
+.workshop-entry-text p {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
   line-height: 1.7;
 }
 
-.workshops-page h1 {
-  margin: 0 0 20px;
-  text-align: center;
-  font-size: 1.5rem;
-
-  letter-spacing: 0.04em;
+.workshop-entry-text p:last-child {
+  margin-bottom: 0;
 }
-
-.workshop-intro {
-  font-family: "Script", cursive;
-  text-align: center;
-  font-size: 1.8rem;
-  color: #237c11;
-  font-weight: 500;
-  margin: 30px auto 20px;
-}
-
-.workshops-page p:not(.workshop-intro) {
-  font-size: 1.2rem;
-  margin: 0px 0 20px;
-}
-
-.workshops-page .section-label {
-  margin-top: 1px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  border-bottom: 1px solid #193d3b;
-}
-
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(25, 61, 59, 0.75);
-  padding: 30px;
-}
-
-.modal img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-
-  border: 12px solid #f7f0df;
-  border-radius: 5px;
-
-  cursor: zoom-out;
-}
-
-/* Images */
-
-.workshop-image {
-  width: 200px;
-  height: 180px;
-  object-fit: cover;
-
-  cursor: zoom-in;
-}
-
-.first-workshop-image {
-  display: block;
-  width: 800px;
-  height: 300px;
-  margin: 0 auto 20px;
-  object-fit: cover;
-  outline: 6px solid green;
-}
-
-.image-right {
-  float: right;
-  margin-left: 35px;
-  margin-bottom: 20px;
-}
-
-.image-left {
-  float: left;
-  margin-right: 35px;
-  margin-bottom: 20px;
-}
-
-/* Workshop headings */
 
 .workshop-description {
-  margin-top: 45px !important;
-  font-size: 1.2rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+  font-size: 1.3rem !important;
   font-weight: 700;
   color: #193d3b;
 }
@@ -505,42 +475,83 @@ body {
   background: #c75b32;
 }
 
-/*Contattami Page*/
+/* Tags */
 
-.contact-page {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 10px 30px 100px;
+.workshop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.workshop-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid rgba(25, 61, 59, 0.3);
+  border-radius: 999px;
+  font-size: 0.8rem;
   color: #193d3b;
 }
 
-.contact-page p:not(.contact-intro) {
+/* Zigzag divider */
 
-  font-size: 1.2rem;
-  line-height: 1.5;
+.workshop-divider {
+  display: flex;
+  justify-content: center;
+  color: #c75b32;
 }
 
-.contact-intro {
-  font-family: "Script", cursive;
-  text-align: left;
-  font-size: 2rem;
-  color: #237c11;
-  font-weight: 500;
-  margin: 30px auto 20px;
+.zigzag-svg {
+  width: 550px;
+  height: 25px;
+
+}
+
+@keyframes zigzag-bob {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+
+/*Contattami Page*/
+
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  gap: 4vw;
+  align-items: center;
+  padding: 25px 55px;
 }
 
 .contatti-image {
-  width: 400px;
+  width: 100%;
+  max-width: 360px;
   height: 500px;
+  margin: 10px;
+  justify-self: center;
+
   border-radius: 12px;
+  object-fit: cover;
   box-shadow: 0 10px 25px rgba(25, 61, 59, 0.18);
-  margin-bottom: 10px;
 }
 
-.contact-page a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.contact-intro {
+  font-size: 2rem;
+  font-weight: bold;
+  color: green;
+
+}
+
+.contact-text {
+  padding: 10px 15px;
 }
 
 /* Footer */

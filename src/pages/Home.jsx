@@ -1,5 +1,21 @@
 import { FaBookOpen, FaFacebook, FaInstagram, FaTelegram, FaWhatsapp } from 'react-icons/fa'
 import { useState } from 'react'
+function ZigzagDivider() {
+    return (
+        <div className="workshop-divider" aria-hidden="true">
+            <svg viewBox="0 0 200 20" preserveAspectRatio="none" className="zigzag-svg">
+                <polyline
+                    points="0,15 20,5 40,15 60,5 80,15 100,5 120,15 140,5 160,15 180,5 200,15"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+            </svg>
+        </div>
+    )
+}
 function Home() {
     const [selectedBook, setSelectedBook] = useState(null)
     const [selectedImage, setSelectedImage] = useState(null)
@@ -311,96 +327,71 @@ function Home() {
                 </div>
             </section>
 
-            {/*Workshops*/}
+            {/* Workshops */}
 
             <section id="workshops" className="feature-card workshop-card">
-                <p className="workshop-intro">
-                    Grazie per aver pensato a me e alle mie storie per organizzare un incontro con i ragazzi!
-                </p>
-                <img
-                    className="first-workshop-image"
-                    src="/images/incontro_2.jpg"
-                    alt="Laboratorio di scrittura "
-                    onClick={() => setSelectedImage("/images/incontro_2.jpg")}
-                />
-                <p>Sono convinta che i bambini e i ragazzi siano la parte meno impattata dalle regole e sovrastrutture sociali o almeno sono quelli che hanno più possibilità di scrollarsele di dosso; è per questo che amo lavorare con le mie storie all’interno del contesto scolastico.
-                    Ogni romanzo che propongo può essere declinato in attività diverse. Per esempio, si può partire dalla tematica affrontata per lavorare alla produzione di storie originali,
-                    facendo almeno un incontro in presenza, per ragionare insieme sulle problematiche legate alla struttura e produzione di un racconto/romanzo, e poi mantenere un rapporto on-line con gli studenti che lo desiderano.
-                    È possibile creare percorsi personalizzati insieme ai docenti partendo da uno dei miei romanzi oppure dalla scrittura creativa e dalla lettura.
-                </p>
 
-                <p className="workshop-description">Incontro con l'autore</p>
-                <img
-                    className="workshop-image image-right"
-                    src="/images/incontro_1.jpeg"
-                    alt="Incontro con l'autore"
-                    onClick={() => setSelectedImage("/images/incontro_1.jpeg")}
-                />
-                <p>
-                    Questo tipo di incontri può svolgersi sia in presenza che on line.
-                    Di solito, i ragazzi hanno letto almeno uno dei miei romanzi e mi fanno delle domande che riguardano la scrittura,
-                    l’editoria, il significato di scrivere storie, perché leggere, cosa e come leggere, fanno domande più o meno personali su come lavoro e come scrivo.
-                    Se non hanno letto nessuno dei miei titoli, glieli racconto io.
-                </p>
+                <p className="section-label workshops-title">Insieme</p>
 
-                <img
-                    className="workshop-image image-left"
-                    src="/images/incontro_3.jpg"
-                    alt="Laboratorio di scrittura"
-                    onClick={() => setSelectedImage("/images/incontro_3.jpg")}
-                />
+                <div className="workshop-list">
 
-                <p className="workshop-description">Laboratorio</p>
-                <p>
-                    Questa formula è quella più appassionante, leggiamo, scriviamo e, di solito, facciamo molto rumore.
-                    Il laboratorio parte da uno dei miei romanzi da cui estrapoliamo un tema e lo approfondiamo durante l’incontro.
-                </p>
-                <p className="workshop-description">Ho letto il romanzo </p>
-                <img
-                    className="workshop-image image-right"
-                    src="/images/incontro_4.jpeg"
-                    alt="Laboratorio di scrittura"
-                    onClick={() => setSelectedImage("/images/incontro_4.jpeg")}
-                />
+                    <div className="workshop-entry">
+                        <div className="workshop-entry-inner">
+                            <img
+                                className="workshop-entry-image"
+                                src="/images/incontro_2.jpg"
+                                alt="Incontro con l'autore"
+                                onClick={() => setSelectedImage("/images/incontro_2.jpg")}
+                            />
+                            <div className="workshop-entry-text">
+                                <p className="workshop-description">Incontro con l'autore</p>
+                                <p>
+                                    Questo tipo di incontri può svolgersi sia in presenza che on line.
+                                    Di solito, i ragazzi hanno letto almeno uno dei miei romanzi e mi fanno delle domande che riguardano la scrittura,
+                                    l’editoria, il significato di scrivere storie, perché leggere, cosa e come leggere, fanno domande più o meno personali su come lavoro e come scrivo.
+                                    Se non hanno letto nessuno dei miei titoli, glieli racconto io.
+                                </p>
+                                <div className="workshop-tags">
+                                    <span className="workshop-tag">In presenza o online</span>
+                                    <span className="workshop-tag">Libro letto o non letto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <p>
-                    Puoi scegliere tra i laboratori specifici collegati al titolo oppure pensiamo insieme a qualcosa di diverso
-                    e più adatto alla tua classe o all’incontro che hai in mente.
 
-                </p>
-                <p className="workshop-description">Non ho letto il romanzo</p>
-                <p>
-                    In questo caso non affronteremo la storia direttamente, ma possiamo comunque introdurla discutendo delle tematiche,
-                    della scrittura o dei miei romanzi in generale in modo che possiate scegliere in seguito quale leggere con la classe.
+                    <ZigzagDivider />
 
-                </p>
-                <p className="workshop-description">In presenza</p>
-                <p>
-                    Questa è la formula migliore perché niente riesce a sostituire davvero il contatto umano.
-                    Vengo da te e dai tuoi ragazzi, più persone coinvolgiamo nell’incontro, meglio è.
-                    In questo caso, a seconda di quante classi e quanti titoli verranno coinvolti, avrò probabilmente bisogno di pernottare oltre che ii arrivare e tornare indietro.
-                    Contattami e parliamone, troviamo insieme la soluzione più adatta. Alcune delle case editrici con cui collaboro coprono parte delle spese e così fanno anche alcune librerie e scuole.
 
-                </p>
-                <p className="workshop-description">On line</p>
-                <img
-                    className="workshop-image image-left"
-                    src="/images/incontro_5.jpeg"
-                    alt="Laboratorio di scrittura"
-                    onClick={() => setSelectedImage("/images/incontro_5.jpeg")}
-                />
-                <p>
-                    Preferisco incontrare una classe alla volta, la situazione on line è più complicata nella gestione a livello umano e, anche se non sembra,
-                    necessita di molta più concentrazione da parte di tutti i partecipanti che non un incontro dal vivo.
-                    Assicuriamoci entrambi di avere una buona connessione e colleghiamoci!
+                    <div className="workshop-entry">
+                        <div className="workshop-entry-inner">
+                            <img
+                                className="workshop-entry-image"
+                                src="/images/incontro_3.jpg"
+                                alt="Laboratorio di scrittura"
+                                onClick={() => setSelectedImage("/images/incontro_3.jpg")}
+                            />
+                            <div className="workshop-entry-text">
+                                <p className="workshop-description">Laboratorio</p>
+                                <p>
+                                    Questa formula è quella più appassionante, leggiamo, scriviamo e, di solito, facciamo molto rumore.
+                                    Il laboratorio parte da uno dei miei romanzi da cui estrapoliamo un tema e lo approfondiamo durante l’incontro.
+                                </p>
+                                <div className="workshop-tags">
+                                    <span className="workshop-tag">In presenza o online</span>
+                                    <span className="workshop-tag">Libro letto o non letto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                </p>
+                </div>
 
-            </section>
+            </section >
 
             {/*Domande Frequenti*/}
 
-            <section id="domande-frequenti" className="faq-section">
+            < section id="domande-frequenti" className="feature-card faq-card" >
                 <h1>Qui troverai le risposte alle domande più comuni.</h1>
                 <p className="faq-question">Quanto costa un incontro?</p>
 
@@ -409,12 +400,16 @@ function Home() {
                     contattami e parliamone,
                     sono sicura che insieme troveremo la maniera di soddisfare tutte le persone coinvolte.
                 </p>
+
+
                 <p className="faq-question">È obbligatorio comprare il libro?</p>
 
                 <p>
                     Non è obbligatorio, i miei titoli sono presenti anche nelle biblioteche e possono essere presi in prestito.
                     Se la tua biblioteca di riferimento non ha i miei titoli, chiedi di acquistarli.
                 </p>
+
+
                 <p className="faq-question">Quanti libri bisogna comprare?</p>
                 <p>
                     Dipende dalle possibilità economiche della scuola e del gruppo di ragazzi e famiglie coinvolte. La cosa migliore è che ogni ragazzo, quando possibile,
@@ -431,6 +426,8 @@ function Home() {
                     Contattami e troviamo insieme la formula migliore per te.
 
                 </p>
+
+
                 <p className="faq-question">In quanti dobbiamo essere per fare un incontro?</p>
                 <p>
                     Mi è capitato di partecipare a incontri all’interno di teatri o aule magne, così come ho partecipato a incontri con solo quattro o cinque persone.
@@ -439,133 +436,125 @@ function Home() {
                     Contattami e parliamo di quello che pensi sia meglio per i tuoi ragazzi.
 
                 </p>
-            </section>
+            </section >
 
             {/*Contatti*/}
 
-            <section id="contatti" className="contact-section">
+            < section id="contatti" className="feature-card contact-section" >
                 <img
-                    className="contatti-image image-right"
+                    className="contatti-image"
                     src="/images/Contattami.jpeg"
                     alt="Erika sotto la pioggia"
                 />
-                <p className="contact-intro">Contattami!</p>
 
-                <p>
-                    Se vuoi contattarmi per informazioni sui miei libri,
-                    presentazioni o collaborazioni, puoi scrivermi.
-                </p>
+                <div className="contact-text">
+                    <p className="contact-intro">Contattami!</p>
 
-                <p>
-                    Email: erikacasali@gmail.com
-                </p>
-                <p>
-                    Puoi anche trovarmi su{" "}
-                    <a
-                        href="https://www.facebook.com/erika.casali.9"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaFacebook /> Facebook
-                    </a>
-                </p>
+                    <p>
+                        Se vuoi contattarmi per informazioni sui miei libri,
+                        presentazioni o collaborazioni, puoi scrivermi.
+                    </p>
 
-                <p>
-                    oppure su{" "}
-                    <a
-                        href="https://www.instagram.com/erikacasali_/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaInstagram /> Instagram
-                    </a>
-                </p>
+                    <p>Email: erikacasali@gmail.com</p>
 
-                <p>
-                    E se vuoi scrivermi in privato, puoi farlo anche su{" "}
-                    <a
-                        href="https://t.me/erikacasali"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaTelegram /> Telegram
-                    </a>
-                </p>
-                <p>
-                    oppure su <FaWhatsapp /> WhatsApp +39 3395610523
-                </p>
+                    <p>
+                        Puoi anche trovarmi su{" "}
+                        <a href="https://www.facebook.com/erika.casali.9" target="_blank" rel="noopener noreferrer">
+                            <FaFacebook /> Facebook
+                        </a>
+                    </p>
 
-            </section>
+                    <p>
+                        oppure su{" "}
+                        <a href="https://www.instagram.com/erikacasali_/" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram /> Instagram
+                        </a>
+                    </p>
+
+                    <p>
+                        E se vuoi scrivermi in privato, puoi farlo anche su{" "}
+                        <a href="https://t.me/erikacasali" target="_blank" rel="noopener noreferrer">
+                            <FaTelegram /> Telegram
+                        </a>
+                    </p>
+
+                    <p>oppure su <FaWhatsapp /> WhatsApp +39 3395610523</p>
+                </div>
+            </section >
 
 
 
             {/* WORKSHOP IMAGE POPUP */}
-            {selectedImage && (
-                <div
-                    className="modal"
-                    onClick={() => setSelectedImage(null)}
-                >
+            {
+                selectedImage && (
                     <div
-                        onClick={(event) => event.stopPropagation()}
+                        className="modal"
+                        onClick={() => setSelectedImage(null)}
                     >
-                        <img
-                            src={selectedImage}
-                            alt="Workshop"
-                        />
+                        <div
+                            onClick={(event) => event.stopPropagation()}
+                        >
+                            <img
+                                src={selectedImage}
+                                alt="Workshop"
+                            />
+                        </div>
                     </div>
-                </div>
-            )}
+                )
+            }
 
             {/*Book pop-up*/}
 
-            {selectedBook && (
-                <div
-                    className="book-popup-overlay"
-                    onClick={() => setSelectedBook(null)}
-                >
+            {
+                selectedBook && (
                     <div
-                        className="book-popup"
-                        style={{
-                            backgroundImage: `url(${selectedBook.image})`
-                        }}
-                        onClick={(event) => event.stopPropagation()}
+                        className="book-popup-overlay"
+                        onClick={() => setSelectedBook(null)}
                     >
-                        <div className="book-popup-content">
+                        <div
+                            className="book-popup"
+                            style={{
+                                backgroundImage: `url(${selectedBook.image})`
+                            }}
+                            onClick={(event) => event.stopPropagation()}
+                        >
+                            <div className="book-popup-content">
 
-                            <button
-                                className="book-popup-close"
-                                onClick={() => setSelectedBook(null)}
-                                aria-label="Chiudi"
-                            >
-                                ×
-                            </button>
+                                <button
+                                    className="book-popup-close"
+                                    onClick={() => setSelectedBook(null)}
+                                    aria-label="Chiudi"
+                                >
+                                    ×
+                                </button>
 
-                            <h2>{selectedBook.title}</h2>
+                                <h2>{selectedBook.title}</h2>
 
-                            <div className="book-popup-text">
-                                <p>{selectedBook.description}</p>
+                                <div className="book-popup-text">
+                                    <p>{selectedBook.description}</p>
 
-                                <p>
-                                    <strong>TEMI:</strong> {selectedBook.themes}
-                                </p>
+                                    <p>
+                                        <strong>TEMI:</strong> {selectedBook.themes}
+                                    </p>
 
-                                <p>
-                                    <strong>TARGET:</strong> {selectedBook.target}
-                                </p>
+                                    <p>
+                                        <strong>TARGET:</strong> {selectedBook.target}
+                                    </p>
 
-                                <p>
-                                    <strong>PAGINE:</strong> {selectedBook.pages}
-                                </p>
+                                    <p>
+                                        <strong>PAGINE:</strong> {selectedBook.pages}
+                                    </p>
 
-                                <p>
-                                    <strong>PREZZO:</strong> {selectedBook.price}
-                                </p>
+                                    <p>
+                                        <strong>PREZZO:</strong> {selectedBook.price}
+                                    </p>
+                                </div>
+
                             </div>
-
                         </div>
                     </div>
-                </div>
-            )}
+                )
+            }
         </>
     )
 }

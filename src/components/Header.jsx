@@ -14,8 +14,8 @@ export default function Header() {
                     <a href="#libri">I miei libri</a>
                     <a href="#chi-sono">Chi sono</a>
                     <a href="#workshops">Workshops</a>
-                    <a href="#contatti">Contatti</a>
                     <a href="#domande-frequenti">Domande Frequenti</a>
+                    <a href="#contatti">Contatti</a>
                 </nav>
 
             </div>
