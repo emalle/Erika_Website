@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export default function Header() {
     return (
         <header className="site-header">
@@ -13,15 +11,11 @@ export default function Header() {
 
                 <nav className="navigation">
 
-                    <a href="/#chi-sono">Chi sono</a>
-
-                    <a href="/#libri">I miei libri</a>
-
-                    <Link to="/workshops">Workshops</Link>
-
-                    <Link to="/contatti">Contatti</Link>
-
-                    <Link to="/domande-frequenti">Domande Frequenti</Link>
+                    <a href="#libri">I miei libri</a>
+                    <a href="#chi-sono">Chi sono</a>
+                    <a href="#workshops">Workshops</a>
+                    <a href="#contatti">Contatti</a>
+                    <a href="#domande-frequenti">Domande Frequenti</a>
                 </nav>
 
             </div>

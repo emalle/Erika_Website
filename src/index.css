@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lazydog&display=swap');
-
 * {
   box-sizing: border-box;
 }
@@ -22,6 +20,7 @@ body {
 .page {
   min-height: 100vh;
   display: flex;
+  height: auto;
   flex-direction: column;
 }
 
@@ -113,8 +112,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 80px auto 80px;
 
   background: #4fe4a8;
   border-radius: 18px;
@@ -352,7 +350,7 @@ body {
 
 .domande-frequenti {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 80px auto 100px;
   background: transparent;
   color: #193d3b;
 }

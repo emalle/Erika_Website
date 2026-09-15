@@ -1,67 +1,11 @@
-import { FaBookOpen } from 'react-icons/fa'
+import { FaBookOpen, FaFacebook, FaInstagram, FaTelegram, FaWhatsapp } from 'react-icons/fa'
 import { useState } from 'react'
 function Home() {
     const [selectedBook, setSelectedBook] = useState(null)
-
+    const [selectedImage, setSelectedImage] = useState(null)
     return (
         <>
-            <section className="feature-card">
-                <div className="card-inner">
-
-                    <div className="portrait-container">
-                        <img
-                            src="/images/Erika1.jpeg"
-                            alt="Erika Casali"
-                            className="portrait"
-                        />
-                    </div>
-
-                    <div className="card-text">
-                        <p className="section-label">Chi sono</p>
-
-                        <p>
-                            Ciao, mi chiamo Erika Casali, sono una scrittrice di storie.
-                            Il più delle volte scrivo storie per ragazzi tra gli 11 e i 17
-                            anni, ma capita anche che una storia per più piccoli o per più
-                            grandi venga a bussare e io mi ritrovi a seguirla fino in fondo.
-                        </p>
-
-                        <p>
-                            Vivo su una piccola isola sperduta nel mare Egeo, dove capre e
-                            gabbiani la fanno da padrone. Nonostante la distanza, vengo spesso
-                            in Italia.
-                        </p>
-
-                        <p>
-                            Le mie passioni si sono tramutate in storie: la letteratura per
-                            ragazzi, viaggiare, le lingue straniere, le culture diverse e tutto
-                            quanto le compone, dal cibo alle abitudini. Tutti questi elementi
-                            sono storie a sé stanti che mi piace declinare e immaginare in
-                            contesti e situazioni più o meno verosimili.
-                        </p>
-
-                        <p>
-                            I miei romanzi parlano di crisi climatica, di disobbedienza civile,
-                            dei Paesi del blocco ex Sovietico, creano ipotesi per immaginare un
-                            modo di vita diverso o mettono in luce lati nascosti di luoghi
-                            famosi, per esempio la Grecia, ma quella del folklore e non delle
-                            divinità.
-                        </p>
-
-                        <p>
-                            Sono incuriosita dal confronto tra l’essere umano e le situazioni
-                            estreme, la sopravvivenza nella natura selvaggia, per esempio, o
-                            durante una guerra. Mi piace inserire i miei personaggi in contesti
-                            in cui è quasi impossibile indossare una maschera e mentire,
-                            contesti in cui sono costretti a reagire nella maniera più
-                            spontanea e immediata.
-                        </p>
-                    </div>
-
-                </div>
-            </section>
-
-
+            {/*I miei libri*/}
             <section id="libri" className="books-section">
                 <p className="section-label">I miei libri</p>
 
@@ -307,7 +251,272 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
+
+            {/*Chi sono*/}
+
+            <section id="chi-sono" className="feature-card">
+                <div className="card-inner">
+
+                    <div className="portrait-container">
+                        <img
+                            src="/images/Erika1.jpeg"
+                            alt="Erika Casali"
+                            className="portrait"
+                        />
+                    </div>
+
+                    <div className="card-text">
+                        <p className="section-label">Chi sono</p>
+
+                        <p>
+                            Ciao, mi chiamo Erika Casali, sono una scrittrice di storie.
+                            Il più delle volte scrivo storie per ragazzi tra gli 11 e i 17
+                            anni, ma capita anche che una storia per più piccoli o per più
+                            grandi venga a bussare e io mi ritrovi a seguirla fino in fondo.
+                        </p>
+
+                        <p>
+                            Vivo su una piccola isola sperduta nel mare Egeo, dove capre e
+                            gabbiani la fanno da padrone. Nonostante la distanza, vengo spesso
+                            in Italia.
+                        </p>
+
+                        <p>
+                            Le mie passioni si sono tramutate in storie: la letteratura per
+                            ragazzi, viaggiare, le lingue straniere, le culture diverse e tutto
+                            quanto le compone, dal cibo alle abitudini. Tutti questi elementi
+                            sono storie a sé stanti che mi piace declinare e immaginare in
+                            contesti e situazioni più o meno verosimili.
+                        </p>
+
+                        <p>
+                            I miei romanzi parlano di crisi climatica, di disobbedienza civile,
+                            dei Paesi del blocco ex Sovietico, creano ipotesi per immaginare un
+                            modo di vita diverso o mettono in luce lati nascosti di luoghi
+                            famosi, per esempio la Grecia, ma quella del folklore e non delle
+                            divinità.
+                        </p>
+
+                        <p>
+                            Sono incuriosita dal confronto tra l’essere umano e le situazioni
+                            estreme, la sopravvivenza nella natura selvaggia, per esempio, o
+                            durante una guerra. Mi piace inserire i miei personaggi in contesti
+                            in cui è quasi impossibile indossare una maschera e mentire,
+                            contesti in cui sono costretti a reagire nella maniera più
+                            spontanea e immediata.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            {/*Workshops*/}
+
+            <section id="workshops" className="feature-card workshop-card">
+                <p className="workshop-intro">
+                    Grazie per aver pensato a me e alle mie storie per organizzare un incontro con i ragazzi!
+                </p>
+                <img
+                    className="first-workshop-image"
+                    src="/images/incontro_2.jpg"
+                    alt="Laboratorio di scrittura "
+                    onClick={() => setSelectedImage("/images/incontro_2.jpg")}
+                />
+                <p>Sono convinta che i bambini e i ragazzi siano la parte meno impattata dalle regole e sovrastrutture sociali o almeno sono quelli che hanno più possibilità di scrollarsele di dosso; è per questo che amo lavorare con le mie storie all’interno del contesto scolastico.
+                    Ogni romanzo che propongo può essere declinato in attività diverse. Per esempio, si può partire dalla tematica affrontata per lavorare alla produzione di storie originali,
+                    facendo almeno un incontro in presenza, per ragionare insieme sulle problematiche legate alla struttura e produzione di un racconto/romanzo, e poi mantenere un rapporto on-line con gli studenti che lo desiderano.
+                    È possibile creare percorsi personalizzati insieme ai docenti partendo da uno dei miei romanzi oppure dalla scrittura creativa e dalla lettura.
+                </p>
+
+                <p className="workshop-description">Incontro con l'autore</p>
+                <img
+                    className="workshop-image image-right"
+                    src="/images/incontro_1.jpeg"
+                    alt="Incontro con l'autore"
+                    onClick={() => setSelectedImage("/images/incontro_1.jpeg")}
+                />
+                <p>
+                    Questo tipo di incontri può svolgersi sia in presenza che on line.
+                    Di solito, i ragazzi hanno letto almeno uno dei miei romanzi e mi fanno delle domande che riguardano la scrittura,
+                    l’editoria, il significato di scrivere storie, perché leggere, cosa e come leggere, fanno domande più o meno personali su come lavoro e come scrivo.
+                    Se non hanno letto nessuno dei miei titoli, glieli racconto io.
+                </p>
+
+                <img
+                    className="workshop-image image-left"
+                    src="/images/incontro_3.jpg"
+                    alt="Laboratorio di scrittura"
+                    onClick={() => setSelectedImage("/images/incontro_3.jpg")}
+                />
+
+                <p className="workshop-description">Laboratorio</p>
+                <p>
+                    Questa formula è quella più appassionante, leggiamo, scriviamo e, di solito, facciamo molto rumore.
+                    Il laboratorio parte da uno dei miei romanzi da cui estrapoliamo un tema e lo approfondiamo durante l’incontro.
+                </p>
+                <p className="workshop-description">Ho letto il romanzo </p>
+                <img
+                    className="workshop-image image-right"
+                    src="/images/incontro_4.jpeg"
+                    alt="Laboratorio di scrittura"
+                    onClick={() => setSelectedImage("/images/incontro_4.jpeg")}
+                />
+
+                <p>
+                    Puoi scegliere tra i laboratori specifici collegati al titolo oppure pensiamo insieme a qualcosa di diverso
+                    e più adatto alla tua classe o all’incontro che hai in mente.
+
+                </p>
+                <p className="workshop-description">Non ho letto il romanzo</p>
+                <p>
+                    In questo caso non affronteremo la storia direttamente, ma possiamo comunque introdurla discutendo delle tematiche,
+                    della scrittura o dei miei romanzi in generale in modo che possiate scegliere in seguito quale leggere con la classe.
+
+                </p>
+                <p className="workshop-description">In presenza</p>
+                <p>
+                    Questa è la formula migliore perché niente riesce a sostituire davvero il contatto umano.
+                    Vengo da te e dai tuoi ragazzi, più persone coinvolgiamo nell’incontro, meglio è.
+                    In questo caso, a seconda di quante classi e quanti titoli verranno coinvolti, avrò probabilmente bisogno di pernottare oltre che ii arrivare e tornare indietro.
+                    Contattami e parliamone, troviamo insieme la soluzione più adatta. Alcune delle case editrici con cui collaboro coprono parte delle spese e così fanno anche alcune librerie e scuole.
+
+                </p>
+                <p className="workshop-description">On line</p>
+                <img
+                    className="workshop-image image-left"
+                    src="/images/incontro_5.jpeg"
+                    alt="Laboratorio di scrittura"
+                    onClick={() => setSelectedImage("/images/incontro_5.jpeg")}
+                />
+                <p>
+                    Preferisco incontrare una classe alla volta, la situazione on line è più complicata nella gestione a livello umano e, anche se non sembra,
+                    necessita di molta più concentrazione da parte di tutti i partecipanti che non un incontro dal vivo.
+                    Assicuriamoci entrambi di avere una buona connessione e colleghiamoci!
+
+                </p>
+
+            </section>
+
+            {/*Domande Frequenti*/}
+
+            <section id="domande-frequenti" className="faq-section">
+                <h1>Qui troverai le risposte alle domande più comuni.</h1>
+                <p className="faq-question">Quanto costa un incontro?</p>
+
+                <p
+                >Gli incontri prevedono un gettone di presenza che varia a seconda di quale formula scegliamo,
+                    contattami e parliamone,
+                    sono sicura che insieme troveremo la maniera di soddisfare tutte le persone coinvolte.
+                </p>
+                <p className="faq-question">È obbligatorio comprare il libro?</p>
+
+                <p>
+                    Non è obbligatorio, i miei titoli sono presenti anche nelle biblioteche e possono essere presi in prestito.
+                    Se la tua biblioteca di riferimento non ha i miei titoli, chiedi di acquistarli.
+                </p>
+                <p className="faq-question">Quanti libri bisogna comprare?</p>
+                <p>
+                    Dipende dalle possibilità economiche della scuola e del gruppo di ragazzi e famiglie coinvolte. La cosa migliore è che ogni ragazzo, quando possibile,
+                    abbia la sua copia del romanzo su cui lavoreremo, ma se non è possibile,
+                    contattami e cerchiamo insieme una soluzione soddisfacente per tutte le persone coinvolte.
+                    A seconda della quantità di libri che vengono comprati varia anche il supporto economico da parte della casa editrice coinvolta.
+                    Alcune delle case editrici con cui collaboro si occupano di pagare il viaggio di andate e ritorno. Contattami e troviamo la formula migliore per tutti.
+
+                </p>
+
+                <p className="faq-question">Quanto dura un incontro?</p>
+                <p>
+                    Dipende dalla formula che scegli: ci sono incontri da un’ora, da due ore, ma anche da quattro che si tengono in due giornate diverse.
+                    Contattami e troviamo insieme la formula migliore per te.
+
+                </p>
+                <p className="faq-question">In quanti dobbiamo essere per fare un incontro?</p>
+                <p>
+                    Mi è capitato di partecipare a incontri all’interno di teatri o aule magne, così come ho partecipato a incontri con solo quattro o cinque persone.
+                    Dipende sempre da che tipo di attività vuoi che svolgiamo insieme. A me piace molto lavorare con le classi singole perché il contatto umano è più diretto e perché
+                    i ragazzi si trovano in una situazione familiare che rende la comunicazione più semplice, ma sono disponibile a parlare anche con un pubblico più folto.
+                    Contattami e parliamo di quello che pensi sia meglio per i tuoi ragazzi.
+
+                </p>
+            </section>
+
+            {/*Contatti*/}
+
+            <section id="contatti" className="contact-section">
+                <img
+                    className="contatti-image image-right"
+                    src="/images/Contattami.jpeg"
+                    alt="Erika sotto la pioggia"
+                />
+                <p className="contact-intro">Contattami!</p>
+
+                <p>
+                    Se vuoi contattarmi per informazioni sui miei libri,
+                    presentazioni o collaborazioni, puoi scrivermi.
+                </p>
+
+                <p>
+                    Email: erikacasali@gmail.com
+                </p>
+                <p>
+                    Puoi anche trovarmi su{" "}
+                    <a
+                        href="https://www.facebook.com/erika.casali.9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaFacebook /> Facebook
+                    </a>
+                </p>
+
+                <p>
+                    oppure su{" "}
+                    <a
+                        href="https://www.instagram.com/erikacasali_/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaInstagram /> Instagram
+                    </a>
+                </p>
+
+                <p>
+                    E se vuoi scrivermi in privato, puoi farlo anche su{" "}
+                    <a
+                        href="https://t.me/erikacasali"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaTelegram /> Telegram
+                    </a>
+                </p>
+                <p>
+                    oppure su <FaWhatsapp /> WhatsApp +39 3395610523
+                </p>
+
+            </section>
+
+
+
+            {/* WORKSHOP IMAGE POPUP */}
+            {selectedImage && (
+                <div
+                    className="modal"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <div
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <img
+                            src={selectedImage}
+                            alt="Workshop"
+                        />
+                    </div>
+                </div>
+            )}
+
+            {/*Book pop-up*/}
 
             {selectedBook && (
                 <div
@@ -360,5 +569,7 @@ function Home() {
         </>
     )
 }
+
+
 
 export default Home
