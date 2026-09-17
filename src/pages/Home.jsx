@@ -2,7 +2,7 @@ import { FaBookOpen, FaFacebook, FaInstagram, FaTelegram, FaWhatsapp } from 'rea
 import { useState } from 'react'
 function ZigzagDivider() {
     return (
-        <div className="workshop-divider" aria-hidden="true">
+        <div className="divider" aria-hidden="true">
             <svg viewBox="0 0 200 20" preserveAspectRatio="none" className="zigzag-svg">
                 <polyline
                     points="0,15 20,5 40,15 60,5 80,15 100,5 120,15 140,5 160,15 180,5 200,15"
@@ -23,7 +23,7 @@ function Home() {
         <>
             {/*I miei libri*/}
             <section id="libri" className="books-section">
-                <p className="section-label">I miei libri</p>
+                <p className="section-label">Le Mie Storie</p>
 
                 <div className="books-grid">
 
@@ -266,7 +266,53 @@ function Home() {
 
                         </div>
                     </div>
+                    <div className="book-card">
+                        <div className="book-cover">
+                            <img
+                                src="/images/LeRagazze.jpg"
+                                alt="Le Ragazze"
+                            />
+                        </div>
+
+                        <div className="book-content">
+                            <h2>Le Ragazze</h2>
+
+                            <h3>Perché leggerlo</h3>
+
+                            <p className="book-summary">
+                                "Non possiamo salvare nessuno, solo noi stessi; possiamo aiutarci l'un l'altro, offrire opzioni e possibilità a chi non ne ha."
+                                Le ragazze è un romanzo che guarda dritto nel buio della tratta e dello sfruttamento senza sconti e senza retorica,
+                                e che trova, proprio lì, il coraggio necessario per raccontare anche la propria rinascita.
+                            </p>
+
+                            <button
+                                className="trama-btn"
+                                onClick={() =>
+                                    setSelectedBook({
+                                        title: 'Le Ragazze - ZOI',
+                                        image: '/images/LeRagazze.jpg',
+                                        description: `Una bottiglia lanciata da un'auto in corsa. 
+                                                    Una ragazza a terra, il sangue che si mescola alla nebbia di una sera qualunque. È così che Caterina incrocia per la prima volta il mondo che le cambierà la vita.
+                                                    Da quella notte comincia a uscire in pattuglia con i volontari di un'associazione che porta tè caldo, preservativi e un po' 
+                                                    di ascolto alle donne trafficate che lavorano sui marciapiedi della periferia. Inna, Jessy, Alina, Maddalena, Anka: nomi che diventano volti, storie di viaggi promessi come riscatto e trasformati in prigionia, di giuramenti vudù e di sorelle costrette a diventare nemiche per sopravvivere. Caterina impara a riconoscere 
+                                                    la lingua della paura in ogni sua sfumatura e a riconoscere, in quella paura, un'eco della propria.`,
+                                        themes: 'Volontariato, Tratta di donne, Sfruttamento sessuale, Violenza di genere',
+                                        target: '14+',
+
+                                        pages: '208',
+
+                                        price: '15 euro'
+                                    })
+                                }
+                            >
+                                <FaBookOpen />
+                                <span>Leggi la trama</span>
+                            </button>
+
+                        </div>
+                    </div>
                 </div>
+
             </section>
 
             {/*Chi sono*/}
@@ -337,12 +383,14 @@ function Home() {
 
                     <div className="workshop-entry">
                         <div className="workshop-entry-inner">
-                            <img
-                                className="workshop-entry-image"
-                                src="/images/incontro_2.jpg"
-                                alt="Incontro con l'autore"
-                                onClick={() => setSelectedImage("/images/incontro_2.jpg")}
-                            />
+                            <div className="workshop-entry-image-container">
+                                <img
+                                    className="workshop-entry-image"
+                                    src="/images/incontro_2.jpg"
+                                    alt="Incontro con l'autore"
+                                    onClick={() => setSelectedImage("/images/incontro_2.jpg")}
+                                />
+                            </div>
                             <div className="workshop-entry-text">
                                 <p className="workshop-description">Incontro con l'autore</p>
                                 <p>
@@ -360,17 +408,16 @@ function Home() {
                     </div>
 
 
-                    <ZigzagDivider />
-
-
                     <div className="workshop-entry">
                         <div className="workshop-entry-inner">
-                            <img
-                                className="workshop-entry-image"
-                                src="/images/incontro_3.jpg"
-                                alt="Laboratorio di scrittura"
-                                onClick={() => setSelectedImage("/images/incontro_3.jpg")}
-                            />
+                            <div className="workshop-entry-image-container">
+                                <img
+                                    className="workshop-entry-image"
+                                    src="/images/incontro_3.jpg"
+                                    alt="Laboratorio di scrittura"
+                                    onClick={() => setSelectedImage("/images/incontro_3.jpg")}
+                                />
+                            </div>
                             <div className="workshop-entry-text">
                                 <p className="workshop-description">Laboratorio</p>
                                 <p>
@@ -383,16 +430,15 @@ function Home() {
                                 </div>
                             </div>
                         </div>
+
                     </div>
-
                 </div>
-
             </section >
 
             {/*Domande Frequenti*/}
 
             < section id="domande-frequenti" className="feature-card faq-card" >
-                <h1>Qui troverai le risposte alle domande più comuni.</h1>
+                <h1>Domande Comuni</h1>
                 <p className="faq-question">Quanto costa un incontro?</p>
 
                 <p
@@ -409,6 +455,7 @@ function Home() {
                     Se la tua biblioteca di riferimento non ha i miei titoli, chiedi di acquistarli.
                 </p>
 
+                <ZigzagDivider />
 
                 <p className="faq-question">Quanti libri bisogna comprare?</p>
                 <p>
@@ -427,6 +474,8 @@ function Home() {
 
                 </p>
 
+                <ZigzagDivider />
+
 
                 <p className="faq-question">In quanti dobbiamo essere per fare un incontro?</p>
                 <p>
@@ -441,11 +490,13 @@ function Home() {
             {/*Contatti*/}
 
             < section id="contatti" className="feature-card contact-section" >
-                <img
-                    className="contatti-image"
-                    src="/images/Contattami.jpeg"
-                    alt="Erika sotto la pioggia"
-                />
+                <div className="contatti-image-container">
+                    <img
+                        className="contatti-image"
+                        src="/images/Contattami.jpeg"
+                        alt="Erika sotto la pioggia"
+                    />
+                </div>
 
                 <div className="contact-text">
                     <p className="contact-intro">Contattami!</p>

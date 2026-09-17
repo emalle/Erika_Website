@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.section-label,
+.faq-card h1,
+.contact-intro {
+  font-family: "Abril Fatface", cursive;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -73,10 +81,9 @@ select {
 
 .site-header h1 {
   margin: 0;
-  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
   font-weight: 600;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .tagline {
@@ -155,21 +162,34 @@ select {
 /* Portrait */
 
 .portrait-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 25px;
+}
+
+.portrait-container::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  background: #800080;
+  top: 1.5%;
+  left: 7%;
+  z-index: 0;
 }
 
 .portrait {
+  position: relative;
+  z-index: 1;
   display: block;
-  width: 70%;
+  width: 90%;
   max-width: 360px;
   max-height: 400px;
-
   object-fit: cover;
-  border-radius: 10px;
-
-  box-shadow: 0 8px 20px rgba(25, 61, 59, 0.25);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* card-text */
@@ -184,11 +204,11 @@ select {
   padding-bottom: 14px;
 
   color: black;
-  font-size: 1rem;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   border-bottom: 1px solid black;
+
 }
 
 .card-text p:not(.section-label) {
@@ -208,7 +228,7 @@ select {
 
 .books-section>.section-label {
   margin-bottom: 25px;
-  text-align: center;
+  text-align: left;
 }
 
 /* Grid of book cards */
@@ -375,15 +395,15 @@ select {
   max-width: 1000px;
   margin: 80px auto 100px;
   background: transparent;
-  color: #193d3b;
 }
 
-.domande-frequenti h1 {
+.faq-card h1 {
   margin: 0 0 50px;
-  text-align: center;
-  font-size: 1.8rem;
-
+  text-align: left;
+  font-size: 3rem;
+  color: black;
   letter-spacing: 0.04em;
+  border-bottom: 1px solid black;
 }
 
 
@@ -419,7 +439,7 @@ select {
 }
 
 .workshops-title {
-  text-align: center;
+  text-align: left;
   margin-bottom: 35px;
 }
 
@@ -434,26 +454,78 @@ select {
 
 .workshop-entry-inner {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 220px minmax(0, 1fr);
   gap: 35px;
   align-items: center;
 }
 
-.workshop-entry:nth-of-type(2) .workshop-entry-inner {
-  grid-template-columns: 1fr 220px;
+/* SECOND WORKSHOP - image on the RIGHT, text on the LEFT */
+.workshop-entry:nth-child(2) .workshop-entry-inner {
+  grid-template-columns: minmax(0, 1fr) 220px;
 }
 
-.workshop-entry:nth-of-type(2) .workshop-entry-image {
+/* Default order: image first, text second */
+.workshop-entry-image-container {
+  order: 1;
+}
+
+.workshop-entry-text {
   order: 2;
 }
 
-.workshop-entry-image {
+/* Second workshop: reverse visual order */
+.workshop-entry:nth-child(2) .workshop-entry-image-container::before {
+  left: auto;
+  right: -20px;
+  top: -20px;
+}
+
+.workshop-entry:nth-child(2) .workshop-entry-image-container {
+  order: 2;
+}
+
+.workshop-entry:nth-child(2) .workshop-entry-text {
+  order: 1;
+}
+
+/* IMAGE CONTAINER */
+
+.workshop-entry-image-container {
+  position: relative;
   width: 220px;
   height: 220px;
+}
+
+/* FRAME  */
+
+.workshop-entry-image-container::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background: #800080;
+  left: -20px;
+  top: -20px;
+  z-index: 0;
+}
+
+/* IMAGE */
+
+.workshop-entry-image {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 220px;
+  height: 220px;
+
   object-fit: cover;
-  border-radius: 10px;
-  cursor: zoom-in;
-  box-shadow: 0 8px 20px rgba(25, 61, 59, 0.15);
+}
+
+/* TEXT */
+
+.workshop-entry-text {
+  min-width: 0;
 }
 
 .workshop-entry-text p {
@@ -469,6 +541,7 @@ select {
 .workshop-description {
   margin-top: 0 !important;
   margin-bottom: 14px !important;
+
   font-size: 1.3rem !important;
   font-weight: 700;
   color: #193d3b;
@@ -476,11 +549,14 @@ select {
 
 .workshop-description::before {
   content: "";
+
   display: inline-block;
+
   width: 7px;
   height: 7px;
   margin-right: 10px;
   margin-bottom: 3px;
+
   border-radius: 50%;
   background: #c75b32;
 }
@@ -505,7 +581,7 @@ select {
 
 /* Zigzag divider */
 
-.workshop-divider {
+.divider {
   display: flex;
   justify-content: center;
   color: #c75b32;
@@ -513,8 +589,7 @@ select {
 
 .zigzag-svg {
   width: 550px;
-  height: 25px;
-
+  height: 55px;
 }
 
 @keyframes zigzag-bob {
@@ -529,9 +604,26 @@ select {
   }
 }
 
+/* Tags */
+
+.workshop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.workshop-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid rgba(25, 61, 59, 0.3);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: #193d3b;
+}
+
 
 /*Contattami Page*/
-
 
 .contact-section {
   display: grid;
@@ -541,23 +633,45 @@ select {
   padding: 25px 55px;
 }
 
-.contatti-image {
+.contatti-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
   width: 100%;
   max-width: 360px;
   height: 500px;
   margin: 10px;
   justify-self: center;
+  padding: 15px;
+}
 
-  border-radius: 12px;
+.contatti-image-container::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  background: #800080;
+  top: 8%;
+  left: 2%;
+  z-index: 0;
+}
+
+.contatti-image {
+  position: relative;
+  z-index: 1;
+
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  margin-top: 50px;
   object-fit: cover;
-  box-shadow: 0 10px 25px rgba(25, 61, 59, 0.18);
+
 }
 
 .contact-intro {
-  font-size: 2rem;
-  font-weight: bold;
-  color: green;
-
+  font-size: 3rem;
+  color: black;
 }
 
 .contact-text {
