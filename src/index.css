@@ -3,6 +3,7 @@
 .section-label,
 .site-header h1,
 .tagline,
+.book-content h2,
 .faq-card h1,
 .contact-intro {
   font-family: "Abril Fatface", cursive;
@@ -14,15 +15,20 @@
 
 html {
   scroll-behavior: smooth;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/images/background_3.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-
 
 body {
   margin: 0;
-  background: white;
   color: #193d3b;
   font-family: "Arial", sans-serif;
+  min-height: 100vh;
 
 
   /* For the page to scroll */
@@ -42,7 +48,7 @@ select {
   display: flex;
   height: auto;
   flex-direction: column;
-  padding-top: 80px;
+  padding-top: 50px;
 }
 
 section[id] {
@@ -56,6 +62,7 @@ section[id] {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
   padding: 3px 10px 3px;
   border-bottom: 1px solid rgba(25, 61, 59, 0.35);
   background: #f7f0df;
@@ -98,7 +105,7 @@ section[id] {
 
 .site-header h1 {
   margin: 0;
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-size: clamp(1.5rem, 4vw, 1.6rem);
   font-weight: 600;
   letter-spacing: 0.15em;
   text-align: left;
@@ -106,7 +113,7 @@ section[id] {
 
 .tagline {
   margin: 8px 0 22px;
-  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-align: left;
@@ -185,7 +192,7 @@ section[id] {
 
   .header-content {
     position: relative;
-    /* so .navigation's absolute positioning is relative to this */
+
   }
 }
 
@@ -200,27 +207,11 @@ section[id] {
 
 .feature-card {
   width: 100%;
-  max-width: 1200px;
-  margin-bottom: 50px;
-  margin: 0 auto 150px;
-  padding: 45px 50px;
+  max-width: 1300px;
+  margin: 0 auto 400px;
+  padding: 0 30px;
 
-  background: color-mix(in srgb, green 20%, beige 80%);
-  border-radius: 24px;
-
-  box-shadow: 0 14px 35px rgba(25, 61, 59, 0.2);
-}
-
-.workshops-card {
-  padding: 45px 55px;
-}
-
-.faq-card {
-  padding: 45px 55px;
-}
-
-.contact-card {
-  padding: 45px 55px;
+  background: white;
 }
 
 .card-inner {
@@ -294,9 +285,10 @@ section[id] {
 /* Books section */
 .books-section {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 50px;
+  max-width: 1300px;
+  margin: 0 auto 400px;
   padding: 0 30px;
+  background: white;
 }
 
 .books-section>.section-label {
@@ -304,51 +296,39 @@ section[id] {
   text-align: left;
 }
 
-/* Grid of book cards */
+/* Grid of book entries — no card box */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px 50px;
-  align-items: stretch;
+  gap: 50px 50px;
+  align-items: start;
 }
 
-/* Individual book  */
+/* Individual book entry */
 .book-card {
   display: grid;
-  grid-template-columns: 110px 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "cover   content";
-  gap: 10px 20px;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 10px 30px;
   align-items: start;
 
-  height: 240px;
-  padding: 25px;
-  overflow: hidden;
-
-  background: #ECAA5F;
-  border-radius: 18px;
-  box-shadow: 0 14px 35px rgba(25, 61, 59, 0.2);
-}
-
-.book-cover {
-  grid-area: cover;
+  padding: 0 0 35px;
+  border-bottom: 1px solid rgba(25, 61, 59, 0.15);
 }
 
 .book-cover img {
   width: 100%;
-  height: 100%;
+  height: 320px;
   object-fit: cover;
   display: block;
 }
 
 .book-content {
-  grid-area: content;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
 }
 
 .book-content h2 {
   margin: 0 0 8px;
+  font-size: 1.2rem;
 }
 
 .book-content h3 {
@@ -356,26 +336,31 @@ section[id] {
   font-weight: 700;
 }
 
+.book-summary {
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+
 .trama-btn {
-  margin-top: auto;
+  margin-top: 4px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 8px;
-  align-self: flex-start;
+  padding: 0;
 
   background: transparent;
+  border: none;
   color: #193d3b;
   font-family: inherit;
-  font-size: 0.80rem;
+  font-size: 0.85rem;
+  font-weight: 700;
 
   cursor: pointer;
-
 }
 
 .trama-btn:hover {
-  background: #193d3b;
-  color: #f7f0df;
+  background: transparent;
+  color: #c75b32;
 }
 
 .trama-btn svg {
@@ -464,14 +449,9 @@ section[id] {
 
 /* Domande Frequenti */
 
-.domande-frequenti {
-  max-width: 1000px;
-  margin: 80px auto 100px;
-  background: transparent;
-}
 
 .faq-card h1 {
-  margin: 0 0 50px;
+  margin-bottom: 100px, 30px, 30px;
   text-align: left;
   font-size: 3rem;
   color: black;
@@ -760,6 +740,24 @@ section[id] {
   border-top: 3px solid green;
 }
 
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/Strip.jpg');
+  background-repeat: repeat;
+  background-size: auto 100px;
+  z-index: 0;
+}
+
+.site-footer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #f7f0df;
+  opacity: 0.80;
+  z-index: 1;
+}
 
 .footer-socials {
   display: flex;

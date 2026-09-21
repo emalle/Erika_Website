@@ -23,7 +23,7 @@ function Home() {
         <>
             {/*I miei libri*/}
             <section id="libri" className="books-section">
-                <p className="section-label">Le Mie Storie</p>
+                <p className="section-label">I Miei Libri</p>
 
                 <div className="books-grid">
 
@@ -79,7 +79,7 @@ function Home() {
                     <div className="book-card">
                         <div className="book-cover">
                             <img
-                                src="/images/Linda.png"
+                                src="/images/linda.jpg"
                                 alt="Linda e la Montagna di Fuoco"
                             />
                         </div>
@@ -103,7 +103,7 @@ function Home() {
                                 onClick={() =>
                                     setSelectedBook({
                                         title: 'Linda e la Montagna di Fuoco - Risma Libri',
-                                        image: '/images/Linda.png',
+                                        image: '/images/linda.jpg',
                                         description: `È estate e Linda sta per arrivare in Grecia, dove ogni anno trascorre le vacanze. Il suo papà è greco, e lì ci sono i nonni che ogni estate la coccolano e le raccontano storie e leggende. 
                                             Una di queste riguarda dei pericolosi esseri che nottetempo escono per rapire i bambini e trascinarli sottoterra. Questa, nelle intenzioni di Linda, sarà l’avventura dell’estate: infatti, di nascosto da genitori e sorellina, vuole avventurarsi in una grotta, 
                                             perché lì è convinta di poter vedere i Kalikatzari (così si chiamano quei mostriciattoli). Naturalmente nulla va come previsto e per Linda inizia un viaggio nell’oscurità, affrontando 
@@ -269,7 +269,7 @@ function Home() {
                     <div className="book-card">
                         <div className="book-cover">
                             <img
-                                src="/images/LeRagazze.jpg"
+                                src="/images/leRagazze.jpg"
                                 alt="Le Ragazze"
                             />
                         </div>
@@ -290,7 +290,7 @@ function Home() {
                                 onClick={() =>
                                     setSelectedBook({
                                         title: 'Le Ragazze - ZOI',
-                                        image: '/images/LeRagazze.jpg',
+                                        image: '/images/leRagazze.jpg',
                                         description: `Una bottiglia lanciata da un'auto in corsa. 
                                                     Una ragazza a terra, il sangue che si mescola alla nebbia di una sera qualunque. È così che Caterina incrocia per la prima volta il mondo che le cambierà la vita.
                                                     Da quella notte comincia a uscire in pattuglia con i volontari di un'associazione che porta tè caldo, preservativi e un po' 
@@ -316,7 +316,6 @@ function Home() {
             </section>
 
             {/*Chi sono*/}
-
             <section id="chi-sono" className="feature-card">
                 <div className="card-inner">
 
@@ -377,7 +376,7 @@ function Home() {
 
             <section id="workshops" className="feature-card workshop-card">
 
-                <p className="section-label workshops-title">Insieme</p>
+                <p className="section-label workshops-title">Workshops</p>
 
                 <div className="workshop-list">
 
@@ -438,7 +437,7 @@ function Home() {
             {/*Domande Frequenti*/}
 
             < section id="domande-frequenti" className="feature-card faq-card" >
-                <h1>Domande Comuni</h1>
+                <h1>Domande Frequenti</h1>
                 <p className="faq-question">Quanto costa un incontro?</p>
 
                 <p
@@ -532,8 +531,6 @@ function Home() {
                     <p>oppure su <FaWhatsapp /> WhatsApp +39 3395610523</p>
                 </div>
             </section >
-
-
 
             {/* WORKSHOP IMAGE POPUP */}
             {
