@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 .section-label,
+.site-header h1,
+.tagline,
 .faq-card h1,
 .contact-intro {
   font-family: "Abril Fatface", cursive;
@@ -40,15 +42,21 @@ select {
   display: flex;
   height: auto;
   flex-direction: column;
+  padding-top: 80px;
+}
+
+section[id] {
+  scroll-margin-top: 90px;
 }
 
 /* Site Header */
 
 .site-header {
-  position: relative;
-  overflow: hidden;
-  padding: 14px 18px 12px;
-  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3px 10px 3px;
   border-bottom: 1px solid rgba(25, 61, 59, 0.35);
   background: #f7f0df;
 }
@@ -77,36 +85,47 @@ select {
   z-index: 2;
   max-width: 1300px;
   margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1px;
+}
+
+.brand {
+  text-align: left;
 }
 
 .site-header h1 {
   margin: 0;
-  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
+  text-align: left;
 }
 
 .tagline {
   margin: 8px 0 22px;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  text-align: left;
 }
 
 /* Navigation */
 
 .navigation {
   display: flex;
-  justify-content: center;
+  text-align: right;
   flex-wrap: wrap;
   gap: 18px;
-  padding-top: 4px;
+  padding-top: 2px;
 }
 
 .navigation a {
   color: #193d3b;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   transition: color 0.2s ease;
@@ -114,6 +133,60 @@ select {
 
 .navigation a:hover {
   color: #c75b32;
+}
+
+/* Hamburger button — hidden on desktop */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #193d3b;
+  border-radius: 2px;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 18px 0;
+
+    background: #f7f0df;
+    border-bottom: 1px solid rgba(25, 61, 59, 0.35);
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .header-content {
+    position: relative;
+    /* so .navigation's absolute positioning is relative to this */
+  }
 }
 
 /* Main Content */
