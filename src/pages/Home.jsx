@@ -385,9 +385,9 @@ function Home() {
                             <div className="workshop-entry-image-container">
                                 <img
                                     className="workshop-entry-image"
-                                    src="/images/incontro_2.jpg"
+                                    src="/images/incontro_1.jpeg"
                                     alt="Incontro con l'autore"
-                                    onClick={() => setSelectedImage("/images/incontro_2.jpg")}
+                                    onClick={() => setSelectedImage("/images/incontro_1.jpeg")}
                                 />
                             </div>
                             <div className="workshop-entry-text">
