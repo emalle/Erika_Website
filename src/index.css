@@ -17,7 +17,7 @@ html {
   scroll-behavior: smooth;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('/images/incontro_2.jpg');
+    url('/images/incontro_1.jpeg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -87,7 +87,7 @@ section[id] {
 .site-header h1 {
   margin: 0;
   font-size: clamp(1.5rem, 4vw, 1.6rem);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.15em;
   text-align: left;
 }
@@ -98,6 +98,19 @@ section[id] {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-align: left;
+}
+
+@media (max-width: 700px) {
+  .site-header h1 {
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+  }
+
+  .tagline {
+    font-size: 0.7rem;
+    margin: 3px 0 0;
+    letter-spacing: 0.1em;
+  }
 }
 
 /* Navigation */
@@ -131,7 +144,7 @@ section[id] {
   gap: 5px;
   width: 32px;
   height: 32px;
-  padding: 0;
+  padding: 0 12px 0 0;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -141,12 +154,16 @@ section[id] {
   display: block;
   height: 2px;
   width: 100%;
-  background: color-mix(in srgb, green 30%, beige 70%);
+  background: black;
   border-radius: 2px;
 }
 
 /* Mobile layout */
 @media (max-width: 700px) {
+  .page {
+    padding-top: 60px;
+  }
+
   .menu-toggle {
     display: flex;
   }
@@ -187,13 +204,26 @@ section[id] {
   background: white;
 }
 
+@media (max-width: 700px) {
+  .feature-card {
+    padding: 24px 20px;
+    margin: 0 auto 80px;
+  }
+}
+
 .card-inner {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
-  gap: 4vw;
+  gap: clamp(24px, 4vw, 4vw);
 
-  padding: 25px 55px;
+  padding: clamp(0px, 5vw, 25px) clamp(0px, 8vw, 55px);
   align-items: center;
+}
+
+@media (max-width: 700px) {
+  .card-inner {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Portrait */
@@ -222,8 +252,8 @@ section[id] {
   z-index: 1;
   display: block;
   width: 100%;
-  max-width: 360px;
-  max-height: 400px;
+  max-width: clamp(220px, 65vw, 360px);
+  max-height: clamp(280px, 78vw, 400px);
   object-fit: cover;
   border-radius: 0;
   box-shadow: none;
@@ -340,6 +370,27 @@ section[id] {
   font-size: 1rem;
 }
 
+@media (max-width: 700px) {
+  .books-section {
+    margin: 15px auto 100px;
+    padding: 30px 20px 20px;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .book-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .book-cover img {
+    height: 260px;
+  }
+}
+
 /* Book popup */
 
 .book-popup-overlay {
@@ -420,6 +471,30 @@ section[id] {
   color: green;
 }
 
+@media (max-width: 700px) {
+  .book-popup {
+    width: 92vw;
+    padding: 28px 20px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .book-popup-content {
+    padding: 18px;
+  }
+
+  .book-popup h2 {
+    font-size: 1.1rem;
+    margin: 0 32px 14px 0;
+  }
+
+  .book-popup-close {
+    top: 4px;
+    right: 8px;
+    font-size: 1.6rem;
+  }
+}
+
 /* Domande Frequenti */
 
 
@@ -465,6 +540,19 @@ section[id] {
   margin-bottom: 35px;
 }
 
+.workshop-intro-greetings {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: color-mix(in srgb, green 40%, beige 60%)
+}
+
+.workshop-intro {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .workshop-list {
   max-width: 1100px;
   margin: 0 auto;
@@ -498,8 +586,8 @@ section[id] {
 /* Second workshop: reverse visual order */
 .workshop-entry:nth-child(2) .workshop-entry-image-container::before {
   left: auto;
-  right: -20px;
-  top: -20px;
+  right: -9%;
+  top: -9%;
 }
 
 .workshop-entry:nth-child(2) .workshop-entry-image-container {
@@ -514,8 +602,8 @@ section[id] {
 
 .workshop-entry-image-container {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: clamp(140px, 30vw, 220px);
+  height: clamp(140px, 30vw, 220px);
 }
 
 /* FRAME  */
@@ -526,8 +614,8 @@ section[id] {
   width: 95%;
   height: 95%;
   background: color-mix(in srgb, green 30%, beige 70%);
-  left: -20px;
-  top: -20px;
+  left: -9%;
+  top: -9%;
   z-index: 0;
 }
 
@@ -538,8 +626,8 @@ section[id] {
   z-index: 1;
 
   display: block;
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  height: 100%;
 
   object-fit: cover;
 }
@@ -601,30 +689,48 @@ section[id] {
   color: black;
 }
 
+@media (max-width: 700px) {
+
+  .workshop-entry-inner,
+  .workshop-entry:nth-child(2) .workshop-entry-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-entry-image-container,
+  .workshop-entry:nth-child(2) .workshop-entry-image-container {
+    order: 1;
+  }
+
+  .workshop-entry-text {
+    order: 2;
+  }
+}
+
 /* Zigzag divider */
 
 .divider {
   display: flex;
   justify-content: center;
   color: color-mix(in srgb, green 30%, beige 70%);
+}
 
-  .zigzag-svg {
-    width: 550px;
-    height: 55px;
+.zigzag-svg {
+  width: 550px;
+  height: 55px;
+}
+
+@keyframes zigzag-bob {
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
-  @keyframes zigzag-bob {
-
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(4px);
-    }
+  50% {
+    transform: translateY(4px);
   }
 }
+
 
 /* Tags */
 
@@ -650,9 +756,16 @@ section[id] {
 .contact-section {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
-  gap: 4vw;
+  gap: clamp(24px, 4vw, 4vw);
   align-items: center;
-  margin-bottom: 400px;
+  margin-bottom: clamp(150px, 40vw, 400px);
+}
+
+@media (max-width: 700px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    margin-bottom: 50px;
+  }
 }
 
 .contatti-image-container {
@@ -661,11 +774,11 @@ section[id] {
   justify-content: center;
 
   width: 100%;
-  max-width: 360px;
-  height: 500px;
+  max-width: clamp(220px, 55vw, 360px);
+  height: clamp(300px, 76vw, 500px);
   margin: 10px;
   justify-self: center;
-  padding: 15px;
+  padding: clamp(8px, 2vw, 15px);
 }
 
 .contatti-image-container::before {
@@ -686,18 +799,17 @@ section[id] {
   width: 90%;
   height: 90%;
   margin: 0;
-  margin-top: 50px;
+  margin-top: clamp(20px, 10vw, 50px);
   object-fit: cover;
-
 }
 
 .contact-intro {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 6vw, 3rem);
   color: black;
 }
 
 .contact-text {
-  padding: 10px 15px;
+  padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 15px);
 }
 
 .contact-text a {
@@ -711,7 +823,6 @@ section[id] {
 
 .contact-text p svg {
   color: green;
-  ;
 }
 
 /* Footer */

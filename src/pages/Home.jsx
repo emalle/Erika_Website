@@ -377,6 +377,18 @@ function Home() {
             <section id="workshops" className="feature-card workshop-card">
 
                 <p className="section-label workshops-title">Workshops</p>
+                <p className="workshop-intro-greetings">
+                    Grazie per aver pensato a me e alle mie storie per organizzare un incontro con i ragazzi!</p>
+
+                <p className="workshop-intro">
+                    Sono convinta che i bambini e i ragazzi siano la parte meno impattata dalle regole
+                    e sovrastrutture sociali o almeno sono quelli che hanno più possibilità di scrollarsele di dosso;
+                    è per questo che amo lavorare con le mie storie all’interno del contesto scolastico.
+                    Ogni romanzo che propongo può essere declinato in attività diverse.
+                    Per esempio, si può partire dalla tematica affrontata per lavorare alla produzione di storie originali,
+                    facendo almeno un incontro in presenza, per ragionare insieme sulle problematiche legate alla struttura e produzione di un racconto/romanzo, e poi mantenere un rapporto on-line con gli studenti che lo desiderano.
+                    È possibile creare percorsi personalizzati insieme ai docenti partendo da uno dei miei romanzi oppure dalla scrittura creativa e dalla lettura.
+                </p>
 
                 <div className="workshop-list">
 
