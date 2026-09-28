@@ -1,4 +1,4 @@
-import { FaBookOpen, FaFacebook, FaInstagram, FaTelegram, FaWhatsapp } from 'react-icons/fa'
+import { FaBookOpen, FaFacebook, FaInstagram, FaTelegram, FaWhatsapp, FaDownload } from 'react-icons/fa'
 import { useState } from 'react'
 
 
@@ -462,6 +462,22 @@ function Home() {
                                     Questa formula è quella più appassionante, leggiamo, scriviamo e, di solito, facciamo molto rumore.
                                     Il laboratorio parte da uno dei miei romanzi da cui estrapoliamo un tema e lo approfondiamo durante l’incontro.
                                 </p>
+                                <div className="download-list">
+                                    <a className="download-btn"
+                                        href="/pdf/Laboratori.pdf"
+                                        download
+                                    >
+                                        <FaDownload />
+                                        <span>Laboratori Romanzi</span>
+                                    </a>
+                                    <a className="download-btn"
+                                        href="/pdf/Scrittura_creativa.pdf"
+                                        download
+                                    >
+                                        <FaDownload />
+                                        <span>Laboratori Scrittura Creativa</span>
+                                    </a>
+                                </div>
                                 <div className="workshop-tags">
                                     <span className="workshop-tag">In presenza o online</span>
                                     <span className="workshop-tag">Libro letto o non letto</span>
