@@ -1,5 +1,7 @@
 import { FaBookOpen, FaFacebook, FaInstagram, FaTelegram, FaWhatsapp } from 'react-icons/fa'
 import { useState } from 'react'
+
+
 function ZigzagDivider() {
     return (
         <div className="divider" aria-hidden="true">
@@ -19,6 +21,31 @@ function ZigzagDivider() {
 function Home() {
     const [selectedBook, setSelectedBook] = useState(null)
     const [selectedImage, setSelectedImage] = useState(null)
+    const [formStatus, setFormStatus] = useState('idle') // 'idle' | 'sending' | 'success' | 'error'
+
+    async function handleSubmit(event) {
+        event.preventDefault()
+        const form = event.target
+        setFormStatus('sending')
+
+        try {
+            const response = await fetch('https://formspree.io/f/xbglynzw', {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' }
+            })
+
+            if (response.ok) {
+                form.reset()
+                setFormStatus('success')
+            } else {
+                setFormStatus('error')
+            }
+        } catch {
+            setFormStatus('error')
+        }
+    }
+
     return (
         <>
             {/*I miei libri*/}
@@ -397,9 +424,9 @@ function Home() {
                             <div className="workshop-entry-image-container">
                                 <img
                                     className="workshop-entry-image"
-                                    src="/images/incontro_1.jpeg"
+                                    src="/images/incontro_2.jpg"
                                     alt="Incontro con l'autore"
-                                    onClick={() => setSelectedImage("/images/incontro_1.jpeg")}
+                                    onClick={() => setSelectedImage("/images/incontro_2.jpg")}
                                 />
                             </div>
                             <div className="workshop-entry-text">
@@ -541,6 +568,27 @@ function Home() {
                     </p>
 
                     <p>oppure su <FaWhatsapp /> WhatsApp +39 3395610523</p>
+                    <form className="contact-form" onSubmit={handleSubmit}>
+                        <label htmlFor="name">Nome</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label htmlFor="message">Messaggio</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit" disabled={formStatus === 'sending'}>
+                            {formStatus === 'sending' ? 'Invio in corso...' : 'Invia'}
+                        </button>
+
+                        {formStatus === 'success' && (
+                            <p className="form-message form-success">Grazie! Il tuo messaggio è stato inviato.</p>
+                        )}
+                        {formStatus === 'error' && (
+                            <p className="form-message form-error">Qualcosa è andato storto. Riprova o scrivimi via email.</p>
+                        )}
+                    </form>
                 </div>
             </section >
 

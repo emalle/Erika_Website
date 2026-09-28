@@ -825,6 +825,77 @@ section[id] {
   color: green;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.contact-form label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: black;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: black;
+  background: white;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: green;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 10px 28px;
+  border: 1px solid black;
+  background: transparent;
+  color: black;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: color-mix(in srgb, green 30%, beige 70%);
+  border-color: green;
+  color: white;
+}
+
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.form-message {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-success {
+  color: color-mix(in srgb, green 70%, beige 30%);
+}
+
+.form-error {
+  color: #b00020;
+}
+
 /* Footer */
 .site-footer {
   background: transparent;
