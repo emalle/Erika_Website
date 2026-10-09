@@ -577,13 +577,13 @@ function Home() {
                     </p>
 
                     <p>
-                        E se vuoi scrivermi in privato, puoi farlo anche su{" "}
+                        E se vuoi scrivermi in privato, puoi farlo su{" "}
                         <a href="https://t.me/erikacasali" target="_blank" rel="noopener noreferrer">
                             <FaTelegram /> Telegram
                         </a>
                     </p>
 
-                    <p>oppure su <FaWhatsapp /> WhatsApp +39 3395610523</p>
+                    <p>oppure su <FaWhatsapp /><span className="whatsapp-text">WhatsApp</span> +39 3395610523</p>
                     <form className="contact-form" onSubmit={handleSubmit}>
                         <label htmlFor="name">Nome</label>
                         <input type="text" id="name" name="name" required />
