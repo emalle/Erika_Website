@@ -57,7 +57,7 @@ function Home() {
                     <div className="book-card">
                         <div className="book-cover">
                             <img
-                                src="/images/Lanterne.jpeg"
+                                src="/images/Lanterne.webp"
                                 alt="Lanterne Verdi"
                             />
                         </div>
@@ -79,7 +79,7 @@ function Home() {
                                 onClick={() =>
                                     setSelectedBook({
                                         title: 'Lanterne Verdi - Einaudi Ragazzi',
-                                        image: '/images/Lanterne.jpeg',
+                                        image: '/images/Lanterne.webp',
                                         description: `Nur e la sua famiglia hanno lasciato il loro Paese in guerra seguendo una promessa di pace.
                                             Si ritrovano in un Paese freddo del Nord, tra loro e l’Europa ci sono solo un confine invalicabile e una foresta antica.
                                             Il desiderio di Nur di essere solo una tredicenne e di vivere senza prendersi cura del fratello
@@ -106,7 +106,7 @@ function Home() {
                     <div className="book-card">
                         <div className="book-cover">
                             <img
-                                src="/images/linda.jpg"
+                                src="/images/linda.webp"
                                 alt="Linda e la Montagna di Fuoco"
                             />
                         </div>
@@ -130,7 +130,7 @@ function Home() {
                                 onClick={() =>
                                     setSelectedBook({
                                         title: 'Linda e la Montagna di Fuoco - Risma Libri',
-                                        image: '/images/linda.jpg',
+                                        image: '/images/linda.webp',
                                         description: `È estate e Linda sta per arrivare in Grecia, dove ogni anno trascorre le vacanze. Il suo papà è greco, e lì ci sono i nonni che ogni estate la coccolano e le raccontano storie e leggende. 
                                             Una di queste riguarda dei pericolosi esseri che nottetempo escono per rapire i bambini e trascinarli sottoterra. Questa, nelle intenzioni di Linda, sarà l’avventura dell’estate: infatti, di nascosto da genitori e sorellina, vuole avventurarsi in una grotta, 
                                             perché lì è convinta di poter vedere i Kalikatzari (così si chiamano quei mostriciattoli). Naturalmente nulla va come previsto e per Linda inizia un viaggio nell’oscurità, affrontando 
@@ -155,7 +155,7 @@ function Home() {
                     <div className="book-card">
                         <div className="book-cover">
                             <img
-                                src="/images/Disobbedienti.jpg"
+                                src="/images/Disobbedienti.webp"
                                 alt="I Disobbedienti"
                             />
                         </div>
@@ -177,7 +177,7 @@ function Home() {
                                 onClick={() =>
                                     setSelectedBook({
                                         title: 'I Disobbedienti - Edizioni Piuma',
-                                        image: '/images/Disobbedienti.jpg',
+                                        image: '/images/Disobbedienti.webp',
                                         description: `I Disobbedienti sono un gruppo di giovani attivisti per l’ambiente. I ragazzi ottengono dal
                                                          Governo un lembo di terra dove sperimentare finalmente uno stile di vita in armonia con 
                                                          la natura. Camelia, una delle fondatrici, scrive un diario per comprendere meglio successi e 
@@ -207,7 +207,7 @@ function Home() {
                     <div className="book-card">
                         <div className="book-cover">
                             <img
-                                src="/images/cuoriforti.jpg"
+                                src="/images/cuoriforti.webp"
                                 alt="Cuori Forti"
                             />
                         </div>
@@ -228,7 +228,7 @@ function Home() {
                                 onClick={() =>
                                     setSelectedBook({
                                         title: 'Cuori Forti - Il Mulino a Vento',
-                                        image: '/images/cuoriforti.jpg',
+                                        image: '/images/cuoriforti.webp',
                                         description: `Diciannove tra i migliori autori italiani hanno scritto diciannove storie pensate per raccontare gli adolescenti di oggi: 
                                         gli amici, la famiglia, la scuola, gli amori, le scelte, il coraggio e le paure in cui si trovano immersi i loro cuori. 
                                         Sono cuori forti e fragili, che troveranno in queste pagine una bussola per orientarsi nella ricerca della propria identità 
@@ -253,7 +253,7 @@ function Home() {
                     <div className="book-card">
                         <div className="book-cover">
                             <img
-                                src="/images/deeplearning.jpg"
+                                src="/images/deeplearning.webp"
                                 alt="Deep Learning"
                             />
                         </div>
@@ -274,7 +274,7 @@ function Home() {
                                 onClick={() =>
                                     setSelectedBook({
                                         title: 'Deep Learning - Giunti Editore',
-                                        image: '/images/deeplearning.jpg',
+                                        image: '/images/deeplearning.webp',
                                         description: `Sette storie diverse per sette adolescenti alle prese con l’intelligenza artificiale e l’impatto che ha nelle loro vite ed emozioni. 
                                                 Distopie e realismo contemporaneo si mischiano in queste avventure per il mondo o nel proprio introspettivo, con l’intento di divertire, 
                                                 intrattenere e al tempo stesso soffermarsi e riflettere in modo più consapevole su questo tema.`,
@@ -296,7 +296,7 @@ function Home() {
                     <div className="book-card">
                         <div className="book-cover">
                             <img
-                                src="/images/leRagazze.jpg"
+                                src="/images/leRagazze.webp"
                                 alt="Le Ragazze"
                             />
                         </div>
@@ -317,7 +317,7 @@ function Home() {
                                 onClick={() =>
                                     setSelectedBook({
                                         title: 'Le Ragazze - ZOI',
-                                        image: '/images/leRagazze.jpg',
+                                        image: '/images/leRagazze.webp',
                                         description: `Una bottiglia lanciata da un'auto in corsa. 
                                                     Una ragazza a terra, il sangue che si mescola alla nebbia di una sera qualunque. È così che Caterina incrocia per la prima volta il mondo che le cambierà la vita.
                                                     Da quella notte comincia a uscire in pattuglia con i volontari di un'associazione che porta tè caldo, preservativi e un po' 
@@ -348,7 +348,7 @@ function Home() {
 
                     <div className="portrait-container">
                         <img
-                            src="/images/Erika1.jpeg"
+                            src="/images/Erika1.webp"
                             alt="Erika Casali"
                             className="portrait"
                         />
@@ -424,9 +424,9 @@ function Home() {
                             <div className="workshop-entry-image-container">
                                 <img
                                     className="workshop-entry-image"
-                                    src="/images/incontro_2.jpg"
+                                    src="/images/incontro_2.webp"
                                     alt="Incontro con l'autore"
-                                    onClick={() => setSelectedImage("/images/incontro_2.jpg")}
+                                    onClick={() => setSelectedImage("/images/incontro_2.webp")}
                                 />
                             </div>
                             <div className="workshop-entry-text">
@@ -451,9 +451,9 @@ function Home() {
                             <div className="workshop-entry-image-container">
                                 <img
                                     className="workshop-entry-image"
-                                    src="/images/incontro_3.jpg"
+                                    src="/images/incontro_3.webp"
                                     alt="Laboratorio di scrittura"
-                                    onClick={() => setSelectedImage("/images/incontro_3.jpg")}
+                                    onClick={() => setSelectedImage("/images/incontro_3.webp")}
                                 />
                             </div>
                             <div className="workshop-entry-text">
@@ -547,7 +547,7 @@ function Home() {
                 <div className="contatti-image-container">
                     <img
                         className="contatti-image"
-                        src="/images/Contattami.jpeg"
+                        src="/images/Contattami.webp"
                         alt="Erika sotto la pioggia"
                     />
                 </div>

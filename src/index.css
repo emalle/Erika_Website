@@ -25,7 +25,7 @@ body::before {
   z-index: -1;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('/images/incontro_1.jpeg');
+    url('/images/incontro_1.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,8 +35,6 @@ body {
   margin: 0;
   color: black;
   font-family: "Arial", sans-serif;
-  min-height: 100vh;
-
 
   /* For the page to scroll */
   min-height: 100vh;
@@ -88,6 +86,7 @@ section[id] {
 }
 
 .brand {
+  margin-top: 6px;
   text-align: center;
 }
 
@@ -104,7 +103,7 @@ section[id] {
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 700px) {
@@ -565,6 +564,13 @@ section[id] {
   color: color-mix(in srgb, green 40%, beige 60%)
 }
 
+@media (max-width: 700px) {
+  .workshop-intro-greetings {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
 .workshop-intro {
   margin: 0 0 16px;
   font-size: 1rem;
@@ -666,11 +672,9 @@ section[id] {
   margin-bottom: 0;
 }
 
-.workshop-description {
-  margin-top: 0 !important;
-  margin-bottom: 14px !important;
-
-  font-size: 1.3rem !important;
+.workshop-entry-text .workshop-description {
+  margin: 0 0 14px;
+  font-size: 1.3rem;
   font-weight: 700;
   color: black;
 }
@@ -772,24 +776,6 @@ section[id] {
     justify-content: center;
     padding: 12px 16px;
   }
-}
-
-/* Tags */
-
-.workshop-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.workshop-tag {
-  display: inline-block;
-  padding: 4px 12px;
-  border: 1px solid black;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  color: black;
 }
 
 
@@ -975,16 +961,4 @@ section[id] {
 .zigzag-svg {
   width: 550px;
   height: 55px;
-}
-
-@keyframes zigzag-bob {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(4px);
-  }
 }
