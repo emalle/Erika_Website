@@ -45,7 +45,7 @@ function Contacts() {
                     presentazioni o collaborazioni, puoi scrivermi.
                 </p>
 
-                <p>Email: erikacasali@gmail.com</p>
+                <p>Email: erikacasali[at]gmail.com</p>
 
                 <p>
                     Puoi anche trovarmi su{" "}
